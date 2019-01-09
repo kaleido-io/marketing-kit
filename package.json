@@ -11,7 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +21,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@storybook/addon-backgrounds": "^4.1.4",
+    "@storybook/addon-info": "^4.1.4",
+    "@storybook/addon-knobs": "^4.1.4",
+    "@storybook/react": "^4.1.4",
+    "babel-loader": "^8.0.5",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0"
+  }
 }

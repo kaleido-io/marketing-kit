@@ -1,0 +1,11 @@
+@import '../styles/variables.scss';
+
+.k-alert {
+    background: $color-white;
+    border-top: 1px solid $brand-purple;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+}
