@@ -1,0 +1,45 @@
+@import '../styles/variables.scss';
+
+.k-logo {
+    align-items: center;
+    display: flex;
+    
+    &__title {
+        background: url('../assets/kaleido-logo.svg') no-repeat center;
+        background-size: contain;
+        height: 22px;
+        width: 140px;
+        text-indent: -9999em;
+    }
+
+    &__tagline {
+        color: $color-white;
+        font-size: .8rem;
+        letter-spacing: .7px;
+        margin-left: 1.1rem;
+
+    }
+
+    &--stacked {
+        align-items: flex-start;
+        flex-direction: column;
+
+        .k-logo__tagline {
+            margin: .5rem 0 0;
+        }
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+
+    .k-logo {
+        
+        &__title {
+            height: 28px;
+            width: 178px;
+        }
+
+    }
+
+}

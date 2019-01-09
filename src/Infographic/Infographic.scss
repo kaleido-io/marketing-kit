@@ -1,0 +1,78 @@
+@import '../styles/variables.scss';
+
+.k-infographic {
+    align-items: center;
+    border: 10px solid $color-lightGrey;
+    border-radius: 9999rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 8rem auto;
+    padding: 2rem;
+    text-align: center;
+    height: calc(300px - 2rem);
+    width: calc(300px - 2rem);
+    position: relative;
+
+    svg {
+        position: absolute;
+        top: -10;
+        left: -10;
+        transform: rotate(-90deg);
+
+        circle {
+            fill: transparent;
+            stroke: $grad-indigo;
+            stroke-width: 10;
+        }
+
+        &:nth-child(2) circle { stroke: $grad-orange; }
+        &:nth-child(3) circle { stroke: $grad-green; }
+        &:nth-child(4) circle { stroke: $grad-lavender; }
+    }
+
+    &--orange {
+        svg circle {
+            stroke: $grad-orange!important;
+        }
+    }
+
+    &--green {
+        svg circle {
+            stroke: $grad-green!important;
+        }
+    }
+
+    &--purple {
+        svg circle {
+            stroke: $grad-lavender!important;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 4rem;
+
+        &--small {
+            @extend .k-infographic__title;
+            font-size: 2rem;
+        }
+
+        + .k-infographic__text {
+            margin-top: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .k-infographic{
+        margin: 4rem auto;
+    }
+
+    .k-solutions__stats{
+        .k-infographic{
+            margin: 2rem auto;
+            width: inherit;
+        }
+    }
+}

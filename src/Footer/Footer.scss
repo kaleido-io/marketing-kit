@@ -1,0 +1,71 @@
+@import '../styles/variables.scss';
+
+.k-footer {
+    background: $brand-purple;
+    padding: 4rem 0;
+
+    address {
+        color: $color-white;
+        font-size: .8rem;
+        margin-top: .5rem;
+        line-height: 1.4em;
+    }
+
+    dt, dd, a, p {
+        color: $color-white;
+        font-size: .8rem;
+    }
+
+    dt {
+        margin-top: 2rem;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+    }
+
+    dd + dd {
+        margin-top: .25rem;
+    }
+
+    &__right {
+        margin-top: 2rem;
+    }
+
+    .k-social-links {
+        display: flex;
+        margin-top: .5rem;
+
+        li + li {
+            margin-left: .75rem;
+        }
+
+        .k-icon {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .k-footer {
+
+        .k-wrapper {
+            display: flex;
+        }
+
+        &__left {
+            display: flex;
+
+            > * + * {
+                margin-left: 4rem;
+            }
+        }
+
+        &__right {
+            margin-left: auto;
+            margin-top: 0;
+        }
+
+        dt {
+            margin-top: 0;
+        }
+    }
+}

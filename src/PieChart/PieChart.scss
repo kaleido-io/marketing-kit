@@ -1,0 +1,55 @@
+@import '../styles/variables.scss';
+
+.k-pie-chart {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+
+    &__labels {
+        margin-left: 2.5em;
+    }
+
+    &__legend {
+        height: 30px;
+        width: 30px;
+        background: $grad-lavender;
+        display: inline-block;
+        margin-right: 1rem;
+    }
+
+    &__label {
+        align-items: center;
+        display: flex;
+        margin-bottom: 1rem;
+
+        &:nth-child(1) .k-pie-chart__legend { background: $grad-orange; }
+        &:nth-child(2) .k-pie-chart__legend { background: $grad-green; }
+        &:nth-child(3) .k-pie-chart__legend { background: $grad-lavender; }
+    }
+
+    &__number {
+        align-items: flex-start;
+        display: flex;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 4rem;
+        margin-right: 1rem;
+
+        small {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    }
+
+    &__title {
+        font-weight: 800;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .k-pie-chart{
+        flex-direction: column;
+    }
+}

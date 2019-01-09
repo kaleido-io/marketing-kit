@@ -6,11 +6,11 @@ import './Alert.scss'
 
 /** Alert component displays text pinned to the bottom of the viewport */
 const Alert = ({ message, dismissText}) => (
-    <div className="k-alert io-py-4 if-js">
-        <div className="io-wrapper">
-            <div className="io-grid io-grid--3 io-grid-row-gap-sm--2">
-                <p className="io-grid-item io-grid-item--2">{message}</p>
-                <div className="io-grid-item io-grid-item--center">
+    <div className="k-alert k-py-4 if-js">
+        <div className="k-wrapper">
+            <div className="k-grid k-grid--3 k-grid-row-gap-sm--2">
+                <p className="k-grid-item k-grid-item--2">{message}</p>
+                <div className="k-grid-item k-grid-item--center">
                     <Button text={ dismissText } />
                 </div>
             </div>

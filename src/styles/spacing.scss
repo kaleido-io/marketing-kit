@@ -1,0 +1,124 @@
+$spaceamounts: (
+  '0': 0,
+  '1': .25, 
+  '2': .5, 
+  '3': .75, 
+  '4': 1,
+  '5': 1.25, 
+  '6': 1.5, 
+  '7': 1.75, 
+  '8': 2, 
+  '9': 2.25, 
+  '10': 2.5, 
+  '11': 2.75, 
+  '12': 3, 
+  '16': 4, 
+  '24': 6, 
+  '32': 8, 
+  '40': 10, 
+  '48': 12
+); 
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $name, $space in $spaceamounts {
+  @each $side in $sides {
+    .k-m#{str-slice($side, 0, 1)}-#{$name} {
+      margin-#{$side}: #{$space}rem !important;
+    }
+  
+    .k-p#{str-slice($side, 0, 1)}-#{$name} {
+      padding-#{$side}: #{$space}rem !important;
+    }
+  }
+
+  .k-mx-#{$name} {
+    margin-left: #{$space}rem !important;
+    margin-right: #{$space}rem !important;
+  }
+  
+  .k-my-#{$name} {
+    margin-top: #{$space}rem !important;
+    margin-bottom: #{$space}rem !important;
+  }
+  
+  .k-px-#{$name} {
+    padding-left: #{$space}rem !important;
+    padding-right: #{$space}rem !important;
+  }
+  
+  .k-py-#{$name} {
+    padding-top: #{$space}rem !important;
+    padding-bottom: #{$space}rem !important;
+  }
+}
+
+.k-mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.k-mt-auto {
+  margin-top: auto;
+}
+
+.k-w--full { width: 100%; }
+.k-max-w--100 { max-width: 100px; }
+.k-max-w--125 { max-width: 125px; }
+.k-max-w--150 { max-width: 150px; }
+.k-max-w--200 { max-width: 200px; }
+.k-max-w--250 { max-width: 250px; }
+.k-max-w--300 { max-width: 300px; }
+.k-max-w--350 { max-width: 350px; }
+.k-max-w--400 { max-width: 400px; }
+.k-max-w--600 { max-width: 600px; }
+.k-max-w--800 { max-width: 800px; }
+
+.k-min-h--200    { min-height: 200px; }
+.k-min-h--400    { min-height: 400px; }
+.k-min-h--600    { min-height: 600px; }
+.k-min-h--800    { min-height: 800px; }
+.k-min-h--1000   { min-height: 1000px; }
+.k-min-h--1200   { min-height: 1200px; }
+
+.k-relative { position: relative; }
+.k-absolute { position: absolute; }
+.k-static { position: static; }
+
+$spaceamounts: (.5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 4, 6, 8, 10, 12); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@media screen and (max-width: 800px) {
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+      .k-m#{str-slice($side, 0, 1)}-sm-#{$space} {
+        margin-#{$side}: #{$space}rem !important;
+      }
+    
+      .k-p#{str-slice($side, 0, 1)}-sm-#{$space} {
+        padding-#{$side}: #{$space}rem !important;
+      }
+    }
+  
+    .k-mx-sm-#{$space} {
+      margin-left: #{$space}rem !important;
+      margin-right: #{$space}rem !important;
+    }
+    
+    .k-my-sm-#{$space} {
+      margin-top: #{$space}rem !important;
+      margin-bottom: #{$space}rem !important;
+    }
+    
+    .k-px-sm-#{$space} {
+      padding-left: #{$space}rem !important;
+      padding-right: #{$space}rem !important;
+    }
+    
+    .k-py-sm-#{$space} {
+      padding-top: #{$space}rem !important;
+      padding-bottom: #{$space}rem !important;
+    }
+  }
+    
+}
