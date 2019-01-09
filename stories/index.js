@@ -11,7 +11,6 @@ import Footer from '../src/Footer';
 import Banner from '../src/Banner';
 import Infographic from '../src/Infographic';
 import PieChart from '../src/PieChart';
-import Promo from '../src/Promo';
 
 import '../src/styles/reset.scss';
 import '../src/styles/spacing.scss';
@@ -148,11 +147,4 @@ storiesOf('PieChart', module)
         <PieChart 
             text={ text('text', undefined) }
                 />
-    ))
-
-storiesOf('Quote', module)
-    .addDecorator(withInfo)
-    .addDecorator(withKnobs)
-    .add('Default', () => (
-        <Quote />
     ))
