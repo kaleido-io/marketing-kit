@@ -3,6 +3,7 @@ import Banner from './Banner';
 import BannerShape from './BannerShape';
 import Button from './Button';
 import CallToAction from './CallToAction';
+import Card from './Card';
 import Footer from './Footer';
 import Grid from './Grid';
 import GridItem from './GridItem';
@@ -20,6 +21,7 @@ export {
     BannerShape,
     Button,
     CallToAction,
+    Card,
     Footer,
     Grid,
     GridItem,
