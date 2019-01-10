@@ -13,21 +13,4 @@ import PieChart from './PieChart';
 import Quote from './Quote';
 import Section from './Section';
 import Wrapper from './Wrapper';
-
-export {
-    Alert,
-    Banner,
-    BannerShape,
-    Button,
-    CallToAction,
-    Footer,
-    Grid,
-    GridItem,
-    Header,
-    Infographic,
-    Logo,
-    PieChart,
-    Quote,
-    Section,
-    Wrapper
-}
+export { Alert, Banner, BannerShape, Button, CallToAction, Footer, Grid, GridItem, Header, Infographic, Logo, PieChart, Quote, Section, Wrapper };

@@ -12,4 +12,8 @@
         &--top {
             justify-content: flex-start;
         }
+
+        * {
+            max-width: 100%;
+        }
     }

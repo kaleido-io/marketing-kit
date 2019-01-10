@@ -2358,6 +2358,8 @@ h1, h2, h3, h4, h5, p, li {
     grid-column-end: span 4; }
   .k-grid-item--top {
     justify-content: flex-start; }
+  .k-grid-item * {
+    max-width: 100%; }
 
 /*!
  * Hamburgers
