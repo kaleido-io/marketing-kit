@@ -2128,6 +2128,100 @@
   .k-pie-chart {
     flex-direction: column; } }
 
+.k-quote {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  text-align: left;
+  box-sizing: border-box; }
+  .k-quote-two {
+    display: flex;
+    padding: 3em; }
+  .k-quote__text {
+    font-size: 1rem;
+    line-height: 30px; }
+    .k-quote__text:before, .k-quote__text:after {
+      content: '"'; }
+    .k-quote__text--large {
+      font-size: 1.4rem;
+      font-weight: 400; }
+  .k-quote__credit {
+    align-items: center;
+    display: flex;
+    font-size: .8rem;
+    margin-top: 1.5em; }
+  .k-quote__headshot {
+    border-radius: 9999em;
+    margin: 0 1rem 0 0;
+    width: 60px;
+    height: 60px; }
+  .k-quote__name {
+    font-weight: 700; }
+  .k-quote--bordered {
+    margin-top: 4rem;
+    position: relative;
+    display: flex;
+    justify-content: center; }
+    .k-quote--bordered:before {
+      content: '';
+      background: -webkit-linear-gradient(#EE34A8, #FD9C51);
+      background: linear-gradient(#EE34A8, #FD9C51);
+      display: block;
+      position: absolute;
+      width: 1rem;
+      margin-left: -4rem;
+      height: calc(100% + 4rem);
+      margin-top: -1rem;
+      -webkit-transform: skewY(-10deg) rotate(10deg);
+              transform: skewY(-10deg) rotate(10deg); }
+
+@media screen and (max-width: 800px) {
+  .k-quote {
+    width: 100%; } }
+
+@media screen and (max-width: 500px) {
+  .k-quote__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 0; }
+  .k-quote__credit {
+    font-size: 12px;
+    line-height: 18px; } }
+
+.k-section {
+  background: #ffffff;
+  padding: 12rem 0;
+  position: relative;
+  z-index: 1;
+  -webkit-transform: skewY(-10deg);
+          transform: skewY(-10deg); }
+  .k-section > * {
+    -webkit-transform: skewY(10deg);
+            transform: skewY(10deg); }
+  .k-section:nth-child(odd) {
+    background-color: #F5F5F5; }
+
+.k-banner + .k-section {
+  margin-top: -12rem; }
+
+.k-section + .k-banner--bottom {
+  margin-top: -12rem; }
+
+@media screen and (max-width: 1100px) {
+  .k-banner + .k-section {
+    padding-top: 18rem; }
+  .k-banner--small + .k-section {
+    padding-top: 8rem; }
+  .k-banner--bottom {
+    padding-top: 18rem; } }
+
+@media screen and (max-width: 500px) {
+  .k-section {
+    padding: 8rem 0 6em; }
+  .k-banner + .k-section {
+    padding-top: 10rem; } }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
