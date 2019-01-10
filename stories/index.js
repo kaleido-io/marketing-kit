@@ -11,6 +11,10 @@ import Footer from '../src/Footer';
 import Banner from '../src/Banner';
 import Infographic from '../src/Infographic';
 import PieChart from '../src/PieChart';
+import Quote from '../src/Quote';
+import Section from '../src/Section';
+import Wrapper from '../src/Wrapper';
+import CallToAction from '../src/CallToAction';
 
 import '../src/styles/reset.scss';
 import '../src/styles/spacing.scss';
@@ -147,4 +151,51 @@ storiesOf('PieChart', module)
         <PieChart 
             text={ text('text', undefined) }
                 />
+    ))
+
+storiesOf('Quote', module)
+    .addDecorator(withInfo)
+    .addDecorator(withKnobs)
+    .add('Default', () => (
+        <Quote 
+            text={ text('text', 'This is the quote text.') }
+            headshot={ text('headshot', '//placehold.it/150x150') }
+            person={{
+                name: text('name', 'Jane Q. Public'),
+                title: text('title', 'CEO'),
+                org: text('org', 'Conglomo')
+            }}
+            isLarge={ boolean('isLarge', false) }
+            border={ boolean('border', false) }
+            noPadding={ boolean('noPadding', false) }
+        
+        />
+    ))
+
+storiesOf('Section', module)
+    .addDecorator(withInfo)
+    .addDecorator(withKnobs)
+    .add('Default', () => (
+        <Section>
+            <Wrapper>
+                <h1 class="k-h1">This is a header</h1>
+                <p class="k-py-8">This is some text.</p>
+                <Button text="Button" />
+            </Wrapper>
+        </Section>
+    ))
+
+storiesOf('Call To Action', module)
+    .addDecorator(withInfo)
+    .addDecorator(withKnobs)
+    .add('Default', () => (
+        <CallToAction 
+            title={ text('title', 'Win the Internet') }
+            text={ text('text', 'Go to google today.') }
+            link={{
+                url: text('link url', 'https://google.com'),
+                title: text('link title', 'Go to Google'),
+                target: '_blank'
+            }}
+            />
     ))
