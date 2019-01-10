@@ -1476,16 +1476,20 @@ h1, h2, h3, h4, h5, p, li {
   left: 52%; }
 
 .k-card {
+  background: #ffffff;
   border: 1px solid #F5F5F5;
   border-radius: 5px;
+  box-sizing: border-box;
   padding: 2rem;
   text-align: center;
-  box-shadow: 3px 3px 3px #e8e8e8;
+  height: 100%;
+  width: 100%;
+  box-shadow: 3px 3px 3px whitesmoke;
   -webkit-transition: all .2s;
   transition: all .2s; }
   .k-card:hover {
-    border: 1px solid #e8e8e8;
-    box-shadow: 7px 7px 7px #F5F5F5; }
+    border: 1px solid whitesmoke;
+    box-shadow: 7px 7px 7px whitesmoke; }
   .k-card img {
     max-width: 100%; }
 

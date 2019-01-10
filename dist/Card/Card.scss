@@ -1,6 +1,7 @@
 @import '../styles/variables.scss';
 
 .k-card {
+    background: $color-white;
     border: 1px solid $color-lightGrey;
     border-radius: 5px;
     box-sizing: border-box;
@@ -8,12 +9,12 @@
     text-align: center;
     height: 100%;
     width: 100%;
-    box-shadow: 3px 3px 3px darken($color-lightGrey, 5%);
+    box-shadow: 3px 3px 3px rgba($color-lightGrey, 80%);
     transition: all .2s;
 
     &:hover {
-        border: 1px solid darken($color-lightGrey, 5%);
-        box-shadow: 7px 7px 7px $color-lightGrey;
+        border: 1px solid rgba($color-lightGrey, 90%);
+        box-shadow: 7px 7px 7px rgba($color-lightGrey, 80%);
     }
 
     img {
