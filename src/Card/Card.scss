@@ -2,19 +2,19 @@
 
 .k-card {
     background: $color-white;
-    border: 1px solid $color-lightGrey;
+    border: 1px solid transparentize($color-medGrey, .8);
     border-radius: 5px;
     box-sizing: border-box;
     padding: 2rem;
     text-align: center;
     height: 100%;
     width: 100%;
-    box-shadow: 3px 3px 3px rgba($color-lightGrey, 80%);
+    box-shadow: 3px 3px 3px transparentize($color-medGrey, .7);
     transition: all .2s;
 
     &:hover {
-        border: 1px solid rgba($color-lightGrey, 90%);
-        box-shadow: 7px 7px 7px rgba($color-lightGrey, 80%);
+        border: 1px solid transparentize($color-medGrey, .4);
+        box-shadow: 7px 7px 7px transparentize($color-medGrey, .8);
     }
 
     img {
