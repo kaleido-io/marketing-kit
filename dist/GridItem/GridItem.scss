@@ -1,0 +1,15 @@
+.k-grid-item {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+
+        &--2 { grid-column-end: span 2; }
+        &--3 { grid-column-end: span 3; }
+        &--4 { grid-column-end: span 4; }
+
+        &--top {
+            justify-content: flex-start;
+        }
+    }

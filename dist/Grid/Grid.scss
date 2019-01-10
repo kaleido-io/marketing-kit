@@ -1,0 +1,115 @@
+@import '../styles/variables.scss';
+
+.k-grid {
+    display: grid;
+    grid-row-gap: 4rem;
+    position: relative;
+    
+    iframe { width: 100%; }
+
+    &--2 { grid-template-rows: repeat(2, auto); }
+    &--3 { grid-template-rows: repeat(3, auto); }
+    &--4 { grid-template-rows: repeat(4, auto); }
+
+    &--center { align-items: center; }
+
+    &-row-gap-sm {
+        &--1 { grid-row-gap: 1rem; }
+        &--2 { grid-row-gap: 2rem; }
+        &--3 { grid-row-gap: 3rem; }
+        &--4 { grid-row-gap: 4rem; }
+        &--5 { grid-row-gap: 5rem; }
+        &--6 { grid-row-gap: 6rem; }
+        &--8 { grid-row-gap: 8rem; }
+        &--12 { grid-row-gap: 12rem; }
+    }
+
+    &--bordered {
+        
+        > :not(:first-child)::before {
+            content: '';
+            height: 1rem;
+            position: relative;
+            display: block;
+            margin-bottom: 6rem;
+            margin-top: 2rem;
+            width: 300px;
+            left: 0;
+            background: linear-gradient(90deg, $grad-indigo, $grad-lavender);
+            transform: skewY(-10deg);
+        }
+
+        > :nth-child(3n)::before { background: linear-gradient(90deg, $grad-blue, $grad-green); }
+        > :nth-child(4n)::before { background: linear-gradient(90deg, $grad-pink, $grad-orange); }
+    }
+}
+
+.k-grid--center {
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .k-grid {
+        grid-template-rows: auto;
+        grid-column-gap: 2rem;
+
+        &--2 { grid-template-columns: repeat(2, 1fr); }
+        &--3 { grid-template-columns: repeat(3, 1fr); }
+        &--4 { grid-template-columns: repeat(4, 1fr); }
+
+        &--alternate { 
+            grid-auto-flow: dense;
+
+            > :nth-child(4n) {
+                text-align: right;
+            }
+
+            > :nth-child(3n) {
+                grid-column-start: 2;
+            }
+        }
+
+        &--bordered {
+
+            > * {
+                position: relative;
+            }
+
+            > :not(:first-child)::before {
+                background: linear-gradient($grad-indigo, $grad-lavender);
+                display: block;
+                position: absolute;
+                width: 1rem;
+                margin: 0;
+                left: -2.5rem;
+                top: 0;
+                height: calc(100% + 4rem);
+                margin-top: -2rem;
+                transform: skewY(-10deg) rotate(10deg);
+            }
+
+            > :nth-child(3n)::before { background: linear-gradient($grad-blue, $grad-green); }
+            > :nth-child(4n)::before { background: linear-gradient($grad-pink, $grad-orange); }
+        }
+
+        &-col-gap {
+            &--2 { grid-column-gap: 2rem; }
+            &--3 { grid-column-gap: 3rem; }
+            &--4 { grid-column-gap: 4rem; }
+            &--5 { grid-column-gap: 5rem; }
+            &--6 { grid-column-gap: 6rem; }
+            &--8 { grid-column-gap: 8rem; }
+            &--12 { grid-column-gap: 12rem; }
+        }
+
+        &-row-gap {
+            &--2 { grid-row-gap: 2rem; }
+            &--3 { grid-row-gap: 3rem; }
+            &--4 { grid-row-gap: 4rem; }
+            &--5 { grid-row-gap: 5rem; }
+            &--6 { grid-row-gap: 6rem; }
+            &--8 { grid-row-gap: 8rem; }
+            &--12 { grid-row-gap: 12rem; }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 {
   "name": "marketing-kit",
+  "module": "dist/index.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,9 +8,14 @@
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
   },
+  "babel": {
+    "presets": [
+      "react"
+    ]
+  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rm -rf dist && mkdir dist && npx babel-cli src/ --out-dir dist --copy-files",
     "test": "react-scripts test",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o docs"
@@ -25,11 +31,15 @@
   ],
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-backgrounds": "^4.1.4",
     "@storybook/addon-info": "^4.1.4",
     "@storybook/addon-knobs": "^4.1.4",
     "@storybook/react": "^4.1.4",
+    "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.5",
+    "babel-preset-react": "^6.24.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0"
   }

@@ -1,0 +1,773 @@
+@import '../styles/variables.scss';
+
+$angle: polygon(100% 0, 0% 100%, 100% 100%);
+$bottomAngle: polygon(0 0, 0% 100%, 100% 0%);
+$triangle: polygon(0% 87%, 50% 0%, 50% 0%, 100% 87%);
+
+.k-banner {
+    background: linear-gradient(45deg, #1C2160, $brand-purple);
+    color: white;
+    padding: calc(8rem + 94px) 0 calc(6rem + 200px);
+
+    .k-promo__item{
+        color: #ffffff;
+        max-width: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    &::after {
+        // background: url(../../assets/red-triangle.png) no-repeat center;
+        background-size: contain;
+        width: 300px;
+        height: 300px;
+        display: block;
+        position: absolute;
+        bottom: -4rem;
+        left: -4rem;
+        content: '';
+        z-index: 2;
+    }
+
+    &__left, &__right {
+        position: relative;
+        width: 47%;
+    }
+
+    &__actions {
+        margin-top: 2rem;
+    }
+
+    &__video {
+        position: absolute;
+        bottom: 8rem;
+        left: 50%;
+        margin-left: 4rem;
+        max-width: 600px;
+        z-index: 5;
+    }
+
+    .k-h6 {
+        font-weight: 400;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 2;
+    }
+
+    &--white {
+        background: #ffffff;
+        position: relative;
+
+        .k-banner__left{
+            width: 51%;
+        }
+        .k-h2{
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+
+        .k-promo__partner-logos {
+            width: inherit;
+            height: inherit;
+            margin: 0 auto;
+            position: relative;
+            transform: rotate(55deg);
+        }
+
+        p, .k-promo__testimonial{
+            color: #6e6e6e;
+        }
+        
+        #square-1, #square-2, #square-3{
+            position: absolute;
+        }
+        
+        #square-1 {
+            right: -4rem;
+            transform: rotate(-35deg);
+            top: -3rem;
+            background: linear-gradient(to right,#EE34A8, #FD9C51);
+        }
+        
+        #square-2 {
+            top: 5rem;
+            right: 0;
+            transform: rotate(-55deg);
+            z-index: 5;
+            background: linear-gradient(to left, #3942C1, #1C2160);
+
+            .top-image, .left-image, .right-image, .bottom-image{
+                position: absolute;
+                height: auto;
+                width: 160px;
+            }
+
+            .top-image{
+                margin-left: 95px;
+            }
+
+            .left-image{
+                margin: 185px 0 0 20px;
+            }
+
+            .right-image{
+                margin: 150px 0 0 220px;
+                width: 140px;
+            }
+            
+            .bottom-image{
+                margin: 300px 0 0 146px;
+            }
+
+        }
+        
+        #square-3 {
+            top: 29rem;
+            right: 13rem;
+            transform: rotate(-12deg);
+            z-index: 4;
+            background: linear-gradient(to right, #429321, #B4EC51);
+        }
+    }
+
+    .k-wrapper {
+        position: static;
+        
+        &::after {
+            content: '';
+            width: 100px;
+            height: 100px;
+            display: block;
+            // background: url(../../assets/purple-triangle.png) no-repeat center;
+            background-size: contain;
+            position: absolute;
+            bottom: 9rem;
+            left: 45%;
+            margin-left: 36rem;
+            z-index: 2;
+        }
+    }
+
+    .k-h2 {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+
+    .k-h5 {
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    &__shape {
+        display: block;
+        height: 200px;
+        position: absolute;
+        width: 200px;
+
+        &--triangle {
+            @extend .k-banner__shape;
+            clip-path: $triangle;
+        }
+
+        &--square {
+            @extend .k-banner__shape;
+        }
+
+        &--circle {
+            @extend .k-banner__shape;
+            border-radius: 9999rem;
+        }
+
+        &--xsmall {
+            height: 60px;
+            width: 60px;
+        }
+
+        &--small {
+            height: 100px;
+            width: 100px;
+        }
+
+        &--large {
+            height: 300px;
+            width: 300px;
+        }
+
+        &--xlarge{
+            height: 400px;
+            width: 400px;
+        }
+
+        &--blue {
+            background: linear-gradient(#33D9F2, #202CE0);
+        }
+
+        &--green {
+            background: linear-gradient(#1C65B4, #35CC8C);
+        }
+
+        &--orange {
+            background: linear-gradient(#EE34A8, #FD9C51);
+        }
+
+        &--purple {
+            background: linear-gradient($grad-indigo, $grad-lavender);
+        }
+
+        &--o-15 {
+            opacity: .15;
+        }
+
+        &--o-30 {
+            opacity: .3;
+        }
+    }
+    
+    #tri-1 {
+        bottom: 21rem;
+        right: -9rem;
+        transform: rotate(50deg);
+    }
+
+    #tri-2 {
+        left: 40%;
+        top: 28rem;
+        transform: rotate(347deg);
+    }
+
+    #tri-3 {
+        left: 3rem;
+        top: 6rem;
+        transform: rotate(-30deg);
+    }
+
+    #square-1 {
+        left: 60%;
+        top: 6rem;
+        transform: rotate(-32deg);
+    }
+
+    #square-2 {
+        top: -3rem;
+        left: 65%;
+        transform: rotate(190deg);
+    }
+
+    #square-3 {
+        top: -14rem;
+        left: 75%;
+        transform: rotate(-45deg);
+    }
+
+    #circle-1 {
+        top: 8rem;
+        right: 2rem;
+    }
+
+    #circle-2 {
+        bottom: 4vw;
+        left: 52%;
+    }
+}
+
+.k-banner--small {
+    padding: 12rem 0 16rem;
+    overflow: hidden;
+    
+    &::after, .k-wrapper::after {
+        content: none;
+    }
+
+    #circle-1 {
+        right: 50%;
+        top: auto;
+        bottom: -2vw;
+        margin-right: -300px;
+    }
+
+    #tri-1 {
+        bottom: 13vw;
+        left: 85%;
+        transform: rotate(40deg);
+        z-index: 1;
+    }
+
+    #tri-2 {
+        left: 5%;
+        transform: rotate(335deg);
+    }
+
+    #tri-3 {
+        left: -6rem;
+        transform: rotate(45deg);
+    }
+
+    #square-1 {
+        left: 45%;
+        transform: rotate(30deg);
+    }
+
+    #square-2 {
+        top: -9rem;
+        transform: rotate(250deg);
+    }
+}
+
+.k-banner--bottom {
+    background: #3842C1 linear-gradient(to bottom, #1C2160 10%, #3842C1);
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    padding: 25vw 0 8rem;
+    bottom: 0;
+
+    .k-button {
+        margin-top: 2rem;
+    }
+
+    .k-wrapper {
+        text-align: center;
+    }
+
+    .k-banner__shape--green{
+        background: linear-gradient(to bottom, #1C65B4 10%, #35CC8C);
+    }
+
+    #circle-1{
+        position: absolute;
+        left: 90px;
+        bottom: 0;
+        transform: rotate(220deg);
+    }
+
+    #circle-2{
+        position: absolute;
+        left: 50px;
+        top: 5vw;
+        transform: rotate(220deg);
+    }
+
+    #tri-2 {
+        position: absolute;
+        left: 420px;
+        bottom: 4vw;
+        transform: rotate(220deg);
+    }
+
+    #tri-3 {
+        position: absolute;
+        right: -10%;
+        top: 15vw;
+        transform: rotate(20deg);
+    }
+
+    #square-1 {
+        position: absolute;
+        -webkit-transform: rotate(20deg);
+        transform: rotate(20deg);
+        top: 15vw;
+        right: 30%;
+        background: linear-gradient(#33D9F2, #202CE0);
+    }
+
+    #square-2 {
+        position: absolute;
+        right: 10vw;
+        top: -10vw;
+        transform: rotate(141deg);
+        background: linear-gradient(to bottom, #1C65B4 10%, #35CC8C);
+    }
+    
+    
+}
+
+.k-banner--green {
+    background: linear-gradient(90deg, $grad-blue, $grad-green);
+}
+
+.k-banner--orange {
+    background: linear-gradient(90deg, $grad-orange, $grad-pink);
+}
+
+.k-banner--pink {
+    background: linear-gradient(90deg, $grad-pink, $grad-orange);
+}
+
+.k-banner--purple {
+    background: linear-gradient(90deg, $grad-indigo, $grad-lavender);
+}
+
+.k-banner--blue {
+    background: linear-gradient(90deg, $grad-indigo, $grad-blue);
+}
+
+
+@media screen and (max-width: 1300px){
+    .k-banner{
+
+        &__home{
+            padding: calc(3rem + 94px) 0 calc(4rem + 200px);
+            margin-bottom: 3em;
+        }
+
+        &__video {
+            margin: 0 auto;
+            max-width: 500px;
+            left: auto;
+            right: 4rem;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .k-banner{
+        .k-promo__item{
+            .k-banner__left{
+                float: none;
+                width: 80%;
+            }
+
+            .k-banner__right {
+                float: none;
+                margin-top: 4rem;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__video {
+            top: 64%;
+            max-width: 450px;
+            left: 50%;
+            right: auto;
+            margin-left: -225px;
+        }
+    
+    }
+    .k-banner--white{
+        .k-decorators--squares {
+            margin: 4rem auto 0;
+        }
+
+        &-row{
+            width: 95%;
+            margin: 0 auto;
+        }
+    
+        &__top-section{
+            flex-direction: column;
+            justify-content: space-around;  
+        }
+    }
+}
+
+@media screen and (max-width: 800px){
+
+    .k-banner--white{
+        .k-decorators--squares {
+            margin: 0 calc((100% - 600px)/2);
+            position: absolute;
+            height: 600px;
+            width: 600px;
+        }
+
+        #square-1{
+            right:0;
+            left: 24em;
+            top: 0;
+        }
+
+        #square-2{
+            right: 0;
+            left: 6em;
+            top: 8em;
+        }
+
+
+        #square-3{
+            right:0;
+            left: 10em;
+            top: 32em;
+        }
+
+        .k-quote{
+            width: 100%;
+            margin: 1em auto;
+            padding: 0;
+            
+            &--large{
+                width: 88%;
+            }
+        }
+
+        .k-quote--bordered:before {
+            margin: 0 auto;
+            width: 300px;      
+            height: 1rem;
+            position: relative;
+            display: block;
+            margin-bottom: 2rem;
+            padding: 0;
+            background: linear-gradient(90deg, $grad-pink, $brand-orange);
+            left: 0;
+            -webkit-transform: skewY(-10deg);
+            transform: skewY(-10deg);  
+        }
+    }
+}
+
+@media screen and (max-width: 642px){
+    .k-banner--white{
+        .k-decorators--squares {
+            width: 600px;
+            margin: 0 calc((100% - 600px)/2);
+            transform: scale(0.8, 0.8);
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .k-banner{
+        margin-top: -155px;
+
+        &::after{
+            width: 100px;
+            height: 100px;
+            bottom: -5rem;
+            right: 2rem;
+            left: inherit;
+            z-index: 5;
+        }
+
+        &--small{
+
+            // &:after {
+            //     content: '';
+            //     background: url(../../assets/blue-triangle.png) no-repeat center;
+            //     background-size: contain;
+            //     bottom: 2rem;
+            //     right: -0.40rem;
+            //     width: 120px;
+            //     height: 120px;
+            // }
+
+            #circle-1{
+                top: 37rem;
+                left: -4rem;    
+                transform: rotate(240deg);        
+            }
+    
+            #circle-2{
+                top: 170vw;
+                left: -50vw;
+            }
+    
+            #square-1 {
+                left: 27rem;
+                top: 3rem;
+                transform: rotate(200deg);
+            }
+    
+            #square-2 {
+                top: 3rem;
+                left: 30rem;
+                transform: rotate(228deg);
+            }
+    
+            #square-3 {
+                top: 5rem;
+                left: 29rem;
+                width: 200px;
+                height: 200px;
+            }
+    
+            #tri-1{
+                display: none;
+            }
+    
+            #tri-2{
+                display: none;
+            }
+
+            #tri-3{
+                transform: rotate(195deg);
+                top: 27em;   
+                left: -15em;         
+            }
+        }
+
+        &__home{
+            padding: calc(5rem + 94px) 0 calc(4rem + 200px);
+            margin-bottom: 8em;
+            
+            #circle-1{
+                top: 31rem;
+                right: -8rem;
+            }
+    
+            #circle-2{
+                top: 170vw;
+                left: -50vw;
+            }
+    
+            #square-1 {
+                left: 27rem;
+                top: 15rem;
+                transform: rotate(195deg);
+            }
+    
+            #square-2 {
+                top: 21rem;
+                left: -16rem;
+                transform: rotate(228deg);
+            }
+    
+            #square-3 {
+                top: 5rem;
+                left: 29rem;
+                width: 200px;
+                height: 200px;
+            }
+    
+            #tri-1{
+                bottom: inherit;
+                top: 33rem;
+                right: -20rem;
+            }
+    
+            #tri-2{
+                left: 35%;
+                top: 28rem;
+            }
+        }
+
+        &__shapes{
+            transform: scale(0.5, 0.5);
+        }
+
+        .k-promo__item{
+
+            .k-banner__left{
+                width: 78%;
+                .k-h6{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        &__video {
+            width: 90%;
+            margin-left: -45%;
+        }
+
+        .k-h2{
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 0.8em;
+        }
+
+        &__left{
+            width: 65%;
+        }
+    }
+
+    .k-banner--bottom{
+        .k-wrapper{
+            width: 75%;
+            padding: 4em 0 0;
+        }
+
+        .k-h4 {
+            font-size: 24px;
+            line-height: 34px;
+        }
+
+        .k-h6{
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .k-banner__shapes{
+            transform: scale(0.75, 0.75);
+        }
+
+        #circle-1{
+            left: 0;
+            top: 250px;
+        }
+
+        #circle-2{
+            left: -180px;
+            top: -200px;
+        }
+
+        #square-1{
+            top: 200px;
+            right: 200px;
+        }
+
+        #square-2{
+            right: -180px;
+            top: -300px;        
+        }
+
+        #tri-2{
+            left: 210px;
+            top: 15px;
+        }
+
+        #tri-3{
+            right: -188px;
+            top: 100px;
+        }
+    }
+
+
+    .k-banner--white{
+        .k-h2{
+            width: 90%;
+        }
+
+        .k-decorators--squares {
+            margin: 0 calc((100% - 400px)/2);
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            transform: scale(0.55, 0.55);
+
+
+            #square-1{
+                left: 18em;
+                top: -9em;
+            }
+
+            #square-2{
+                left: 0em;
+                top: -1em;
+            }
+
+            #square-3{
+                right: 0;
+                left: 4em;
+                top: 23em;
+            }
+        }
+
+        .k-quote__text--large {
+            font-size: 14px;
+            line-height: 24px;
+        }
+
+        .k-quote__credit {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
