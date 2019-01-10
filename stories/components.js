@@ -4,6 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
 
 import Alert from '../src/Alert';
+import BannerShape from '../src/BannerShape';
 import Button from '../src/Button';
 import Infographic from '../src/Infographic';
 import PieChart from '../src/PieChart';
@@ -17,6 +18,15 @@ storiesOf('Components', module)
             message={text('message', 'This is my alert message.')}  
             dismissText={text('dissmissText', 'Dismiss')} 
             />
+    )
+    .add('BannerShape', () =>
+        <BannerShape
+            id="what"
+            shape={ select('shape', ['circle', 'triangle', 'square'], 'circle') }
+            color={ select('color', ['blue', 'purple', 'green', 'orange'], 'blue') }
+            size={ select('size', ['xsmall', 'small', 'medium', 'large', 'xlarge'], 'medium') }
+            opacity={ select('opacity', ['15', '30', '100'], '100') }
+        />
     )
     .add('Button', () => 
         <Button 

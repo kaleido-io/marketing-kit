@@ -11,7 +11,8 @@ BannerShape.propTypes = {
     id: PropTypes.string,
     shape: PropTypes.string,
     color: PropTypes.string,
-    size: PropTypes.string
+    size: PropTypes.string,
+    opacity: PropTypes.string
 }
 
 export default BannerShape
