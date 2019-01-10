@@ -18,6 +18,7 @@ storiesOf('Layout', module)
     .addDecorator(withKnobs)
     .add('Banner', () => (
         <Banner 
+            bgColor={ select('bgColor', ['blue', 'purple', 'orange', 'green', 'pink'], 'blue') }
             shapeColors={[
                 select('shapeColor1', ['orange', 'green', 'purple', 'blue'], 'green'),
                 select('shapeColor2', ['orange', 'green', 'purple', 'blue'], 'blue'),

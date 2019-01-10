@@ -4,7 +4,6 @@ import BannerShape from '../BannerShape';
 import Wrapper from '../Wrapper';
 import './Banner.scss';
 
-
 const Banner = ({ title, description, link, image, bgColor, shapeColors}) => (
 
 <div className={`k-banner k-banner--small k-banner--${bgColor}`}>
@@ -47,15 +46,21 @@ Banner.defaultProps= {
 }
 
 Banner.propTypes = {
+    /** Background color */
     bgColor: PropTypes.string,
+    /** Colors for shapes */
     shapeColors: PropTypes.arrayOf(PropTypes.string),
+    /** Banner title */
     title: PropTypes.string.isRequired,
+    /** Banner text */
     description: PropTypes.string.isRequired,
+    /** Banner link */
     link: PropTypes.shape({
         url: PropTypes.string,
         target: PropTypes.string,
         title: PropTypes.string
     }),
+    /** Image to be displayed in banner */
     image: PropTypes.shape({
         sizes: PropTypes.arrayOf(PropTypes.shape)
     })
