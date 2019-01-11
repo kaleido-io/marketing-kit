@@ -6,7 +6,8 @@
     position: fixed;
     width: 100vw;
     z-index: 9999;
-    transition: box-shadow .3s;
+    transition-: all .3s;
+    transition-property: background box-shadow;
 
     &.is-scrolled {
         box-shadow: 0 0 20px rgba($color-white, .2);
@@ -20,7 +21,6 @@
         align-items: center;
         display: flex;
         justify-content: space-between;
-        max-width: 1084px; 
         width: 90%;
     }
 
@@ -159,10 +159,10 @@
                 margin: 0 0 0 auto;
             }
         
-            .k-button--outline-white {
-                border-color: $color-white!important;
-                color: $color-white!important;
-            }
+        .k-button--outline-white {
+            border-color: $color-white!important;
+            color: $color-white!important;
+        }
         }
 
         &__nav-dropdown {

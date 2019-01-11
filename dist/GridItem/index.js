@@ -5,12 +5,16 @@ import './GridItem.scss';
 const GridItem = ({
   children,
   colSpan,
-  alignTop
+  alignTop,
+  alignLeft,
+  row
 }) => React.createElement("div", {
   className: `
         k-grid-item 
         ${colSpan && 'k-grid-item--' + colSpan}
         ${alignTop && 'k-grid-item--top'}
+        ${alignLeft && 'k-grid-item--left'}
+        ${row && 'k-grid-item--row'}
     `
 }, children);
 
@@ -25,6 +29,12 @@ GridItem.propTypes = {
   colSpan: PropTypes.string,
 
   /** Align content to the top */
-  alignTop: PropTypes.bool
+  alignTop: PropTypes.bool,
+
+  /** Aligg content to the left */
+  alignLeft: PropTypes.bool,
+
+  /** Flex direction row */
+  row: PropTypes.bool
 };
 export default GridItem;

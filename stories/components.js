@@ -4,6 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { withKnobs, text, boolean, number, select } from '@storybook/addon-knobs';
 
 import Alert from '../src/Alert';
+import BackTo from '../src/BackTo';
 import BannerShape from '../src/BannerShape';
 import Button from '../src/Button';
 import Card from '../src/Card';
@@ -22,6 +23,14 @@ storiesOf('Components', module)
             message={text('message', 'This is my alert message.')}  
             dismissText={text('dissmissText', 'Dismiss')} 
             />
+    )
+    .add('BackTo', () =>
+        <Wrapper>
+            <BackTo
+                text={ text('text', 'Back to Previous') }            
+                url={ text('url', 'https://google.com') }
+            />
+        </Wrapper>
     )
     .add('BannerShape', () =>
         <BannerShape

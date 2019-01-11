@@ -1,0 +1,31 @@
+@import '../styles/variables.scss';
+
+.k-back-to {
+    color: $color-black;
+    display: block;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+
+    &__arrow {
+        display: inline-block;
+        left: 0;
+        margin-right: .25rem;
+        position: relative;
+        transition: all .3s;
+    }
+
+    &:hover {
+
+        .k-back-to__arrow {
+            color: $brand-purple;
+            left: -.25rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .k-back-to {
+        margin-left: -1.25rem;
+    }
+}

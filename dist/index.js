@@ -1,4 +1,5 @@
 import Alert from './Alert';
+import BackTo from './BackTo';
 import Banner from './Banner';
 import BannerShape from './BannerShape';
 import Button from './Button';
@@ -14,4 +15,4 @@ import PieChart from './PieChart';
 import Quote from './Quote';
 import Section from './Section';
 import Wrapper from './Wrapper';
-export { Alert, Banner, BannerShape, Button, CallToAction, Card, Footer, Grid, GridItem, Header, Infographic, Logo, PieChart, Quote, Section, Wrapper };
+export { Alert, BackTo, Banner, BannerShape, Button, CallToAction, Card, Footer, Grid, GridItem, Header, Infographic, Logo, PieChart, Quote, Section, Wrapper };

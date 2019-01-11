@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+$colors: (
+  'brand-purple': $brand-purple,
+  'color-black': $color-black,
+  'color-lightGrey': $color-lightGrey,
+  'color-grey': $color-grey,
+  'grad-orange': $grad-orange,
+  'grad-pink': $grad-pink,
+  'grad-indigo': $grad-indigo,
+  'grad-lavender': $grad-lavender,
+  'grad-green': $grad-green,
+  'grad-blue': $grad-blue  ,
+  'grad-red': $grad-red
+);
+
+
+@each $name, $color in $colors {
+    .k-bg--#{$name} {
+        background-color: #{$color} !important;
+    }
+
+    .k-color--#{$name} {
+        color: #{$color} !important;
+    }
+
+    .k-border--#{$name} {
+        border: 1px solid #{$color} !important;
+    }
+}

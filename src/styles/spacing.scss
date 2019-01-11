@@ -84,6 +84,9 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 .k-absolute { position: absolute; }
 .k-static { position: static; }
 
+.k-float--left { float: left; }
+.k-float--right { float: right; }
+
 $spaceamounts: (.5, .75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75, 3, 4, 6, 8, 10, 12); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
 

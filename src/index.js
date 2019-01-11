@@ -1,4 +1,5 @@
 import Alert from './Alert';
+import BackTo from './BackTo';
 import Banner from './Banner';
 import BannerShape from './BannerShape';
 import Button from './Button';
@@ -17,6 +18,7 @@ import Wrapper from './Wrapper';
 
 export {
     Alert,
+    BackTo,
     Banner,
     BannerShape,
     Button,
