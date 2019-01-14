@@ -1508,6 +1508,7 @@ h1, h2, h3, h4, h5, p, li {
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(204, 204, 204, 0.3);
   box-sizing: border-box;
+  color: #111111;
   height: 100%;
   padding: 2rem;
   position: relative;
@@ -1520,11 +1521,10 @@ h1, h2, h3, h4, h5, p, li {
     box-shadow: 7px 7px 7px rgba(204, 204, 204, 0.2); }
   .k-card img {
     max-width: 100%; }
-  .k-card--has-meta {
-    padding-top: 4rem; }
   .k-card__meta {
-    background: #F5F5F5;
+    background: #3842C1;
     box-sizing: border-box;
+    color: #ffffff;
     left: 0;
     padding: .25rem 1rem;
     position: absolute;

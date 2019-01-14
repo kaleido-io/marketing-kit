@@ -8,7 +8,7 @@ const Card = ({
   icon,
   meta
 }) => React.createElement("div", {
-  className: `k-card ${meta ? 'k-card--has-meta' : ''}`
+  className: "k-card"
 }, meta && React.createElement("div", {
   class: "k-card__meta"
 }, meta), React.createElement("img", {

@@ -4,7 +4,7 @@ import React from 'react';
 import './Card.scss';
 
 const Card = ({ title, text, icon, meta }) => (
-    <div className={ `k-card ${ meta ? 'k-card--has-meta' : '' }` }>
+    <div className='k-card'>
         { meta && <div class="k-card__meta">{ meta }</div>}
         <img src={ icon } />
         <h5 className="k-h5 k-mt-4">{ title }</h5>
