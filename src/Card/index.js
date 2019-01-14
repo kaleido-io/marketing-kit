@@ -3,8 +3,9 @@ import React from 'react';
 
 import './Card.scss';
 
-const Card = ({ title, text, icon }) => (
-    <div className="k-card">
+const Card = ({ title, text, icon, meta }) => (
+    <div className={ `k-card ${ meta ? 'k-card--has-meta' : '' }` }>
+        { meta && <div class="k-card__meta">{ meta }</div>}
         <img src={ icon } />
         <h5 className="k-h5 k-mt-4">{ title }</h5>
         <p className="k-mt-2">{ text }</p>
@@ -17,7 +18,9 @@ Card.propTypes = {
     /** Description text */
     text: PropTypes.string,
     /** Icon URL */
-    icon: PropTypes.string
+    icon: PropTypes.string,
+    /** Container for meta content */
+    meta: PropTypes.element
 };
 
 export default Card;

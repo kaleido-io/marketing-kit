@@ -55,6 +55,7 @@ storiesOf('Components', module)
                     icon={ text('icon', '//placehold.it/150x150')}
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
+                    meta={ <div>Meta</div> }
                 /> 
             </GridItem>
             <GridItem>
@@ -62,6 +63,7 @@ storiesOf('Components', module)
                     icon={ text('icon', '//placehold.it/150x150')}
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
+                    meta={ <div>Meta</div> }
                 /> 
             </GridItem>
             <GridItem>
@@ -69,6 +71,7 @@ storiesOf('Components', module)
                     icon={ text('icon', '//placehold.it/150x150')}
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
+                    meta={ <div>Meta</div> }
                 /> 
             </GridItem>
             <GridItem>
@@ -76,6 +79,7 @@ storiesOf('Components', module)
                     icon={ text('icon', '//placehold.it/150x150')}
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
+                    meta={ <div>Meta</div> }
                 /> 
             </GridItem>
         </Grid></Wrapper>
@@ -90,7 +94,20 @@ storiesOf('Components', module)
     )
     .add('PieChart', () => 
         <PieChart 
-            text={ text('text', undefined) }
+            text={ text('text', 'Chart Text') }
+            values={[{
+                title: text('title 1', 'Data 1'),
+                text: text('text 1', 'this is some text'),
+                value: text('value 1', '35')
+            },{
+                title: text('title 2', 'Data 2'),
+                text: text('text 2', 'this is some text'),
+                value: text('value 2', '15')
+            },{
+                title: text('title 3', 'Data 3'),
+                text: text('text 3', 'this is some text'),
+                value: text('value 3', '50')
+            }]}
             />
     )
     .add('Quote', () => 

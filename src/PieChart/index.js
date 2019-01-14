@@ -12,7 +12,7 @@ const PieChart = ({ text, values }) => {
         <div className="k-grid k-grid--2 k-grid-col-gap--4 k-grid-row-gap-sm--2 k-pie-chart">
 
             <div className="k-infographic">
-                <h3 className="k-infographic__title--small">{text }</h3>
+                <h3 className="k-infographic__title--small">{ text }</h3>
 
                 { values.map((fill, index) => {
                     totalValue = totalValue + fill.value
