@@ -5,10 +5,13 @@ import './Card.scss';
 const Card = ({
   title,
   text,
-  icon
+  icon,
+  meta
 }) => React.createElement("div", {
-  className: "k-card"
-}, React.createElement("img", {
+  className: `k-card ${meta ? 'k-card--has-meta' : ''}`
+}, meta && React.createElement("div", {
+  class: "k-card__meta"
+}, meta), React.createElement("img", {
   src: icon
 }), React.createElement("h5", {
   className: "k-h5 k-mt-4"
@@ -24,6 +27,9 @@ Card.propTypes = {
   text: PropTypes.string,
 
   /** Icon URL */
-  icon: PropTypes.string
+  icon: PropTypes.string,
+
+  /** Container for meta content */
+  meta: PropTypes.element
 };
 export default Card;

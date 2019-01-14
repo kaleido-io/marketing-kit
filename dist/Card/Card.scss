@@ -4,13 +4,14 @@
     background: $color-white;
     border: 1px solid transparentize($color-medGrey, .8);
     border-radius: 5px;
-    box-sizing: border-box;
-    padding: 2rem;
-    text-align: center;
-    height: 100%;
-    width: 100%;
     box-shadow: 3px 3px 3px transparentize($color-medGrey, .7);
+    box-sizing: border-box;
+    height: 100%;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
     transition: all .2s;
+    width: 100%;
 
     &:hover {
         border: 1px solid transparentize($color-medGrey, .4);
@@ -19,5 +20,19 @@
 
     img {
         max-width: 100%;
+    }
+
+    &--has-meta {
+        padding-top: 4rem;
+    }
+
+    &__meta {
+        background: $color-lightGrey;
+        box-sizing: border-box;
+        left: 0;
+        padding: .25rem 1rem;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 }

@@ -1506,19 +1506,30 @@ h1, h2, h3, h4, h5, p, li {
   background: #ffffff;
   border: 1px solid rgba(204, 204, 204, 0.2);
   border-radius: 5px;
-  box-sizing: border-box;
-  padding: 2rem;
-  text-align: center;
-  height: 100%;
-  width: 100%;
   box-shadow: 3px 3px 3px rgba(204, 204, 204, 0.3);
+  box-sizing: border-box;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+  text-align: center;
   -webkit-transition: all .2s;
-  transition: all .2s; }
+  transition: all .2s;
+  width: 100%; }
   .k-card:hover {
     border: 1px solid rgba(204, 204, 204, 0.6);
     box-shadow: 7px 7px 7px rgba(204, 204, 204, 0.2); }
   .k-card img {
     max-width: 100%; }
+  .k-card--has-meta {
+    padding-top: 4rem; }
+  .k-card__meta {
+    background: #F5F5F5;
+    box-sizing: border-box;
+    left: 0;
+    padding: .25rem 1rem;
+    position: absolute;
+    top: 0;
+    width: 100%; }
 
 .k-grid {
   display: grid;
