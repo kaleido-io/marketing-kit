@@ -838,6 +838,9 @@ table {
 .k-float--right {
   float: right; }
 
+.k-border-box {
+  box-sizing: border-box; }
+
 @media screen and (max-width: 800px) {
   .k-mt-sm-0.5 {
     margin-top: 0.5rem !important; }

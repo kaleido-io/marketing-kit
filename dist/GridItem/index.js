@@ -23,7 +23,7 @@ GridItem.defaultProps = {
 };
 GridItem.propTypes = {
   /** Elements to be wrapped */
-  children: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType(PropTypes.element, PropTypes.arrayOf(PropTypes.element)).isRequired,
 
   /** Number of columns in the grid to span */
   colSpan: PropTypes.string,
