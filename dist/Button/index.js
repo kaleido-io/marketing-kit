@@ -4,19 +4,25 @@ import './Button.scss';
 
 const Button = ({
   color,
-  text
+  text,
+  disabled
 }) => React.createElement("button", {
-  className: 'k-button k-button--' + color
+  className: 'k-button k-button--' + color,
+  disabled: disabled
 }, text);
 
 Button.defaultProps = {
-  color: 'purple'
+  color: 'purple',
+  disabled: false
 };
 Button.propTypes = {
   /** Button text */
   text: PropTypes.string.isRequired,
 
   /** Possible values: purple, white, outline-purple, outline-white */
-  color: PropTypes.string
+  color: PropTypes.string,
+
+  /** Ability to disabled this button */
+  disabled: PropTypes.bool
 };
 export default Button;

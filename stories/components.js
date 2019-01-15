@@ -45,6 +45,7 @@ storiesOf('Components', module)
         <Button 
             text={ text('text', 'Button Text') } 
             color={ select('color', ['purple', 'white', 'outline-purple', 'outline-white']) }
+            disabled={ boolean('disabled', false) }
             /> 
     )
     .add('Card', () => 

@@ -1413,12 +1413,16 @@ h1, h2, h3, h4, h5, p, li {
     color: #ffffff; }
     .k-button--purple:hover {
       background: #5c65d0; }
+    .k-button--purple[disabled]:hover {
+      background: #3842C1; }
   .k-button--white {
     background: #ffffff;
     border: 2px solid #ffffff;
     color: #3842C1 !important; }
     .k-button--white:hover {
       background: #F5F5F5; }
+    .k-button--white[disabled]:hover {
+      background: #ffffff; }
   .k-button--outline-purple {
     background: none;
     border: 2px solid #3842C1;
@@ -1426,6 +1430,8 @@ h1, h2, h3, h4, h5, p, li {
     .k-button--outline-purple:hover {
       background: #3842C1;
       color: #ffffff; }
+    .k-button--outline-purple[disabled]:hover {
+      background: none; }
   .k-button--outline-white {
     background: none;
     border: 2px solid #ffffff;
@@ -1433,6 +1439,11 @@ h1, h2, h3, h4, h5, p, li {
     .k-button--outline-white:hover {
       background: #ffffff;
       color: #3842C1; }
+    .k-button--outline-white[disabled]:hover {
+      background: none; }
+  .k-button[disabled] {
+    cursor: default;
+    opacity: .3; }
 
 .k-alert {
   background: #ffffff;
@@ -1504,7 +1515,7 @@ h1, h2, h3, h4, h5, p, li {
 
 .k-card {
   background: #ffffff;
-  border: 1px solid rgba(204, 204, 204, 0.2);
+  border: 1px solid rgba(204, 204, 204, 0.5);
   border-radius: 5px;
   box-shadow: 3px 3px 3px rgba(204, 204, 204, 0.3);
   box-sizing: border-box;
@@ -1517,7 +1528,7 @@ h1, h2, h3, h4, h5, p, li {
   transition: all .2s;
   width: 100%; }
   .k-card:hover {
-    border: 1px solid rgba(204, 204, 204, 0.6);
+    border: 1px solid rgba(204, 204, 204, 0.8);
     box-shadow: 7px 7px 7px rgba(204, 204, 204, 0.2); }
   .k-card img {
     max-width: 100%; }

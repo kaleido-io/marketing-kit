@@ -2,7 +2,7 @@
 
 .k-card {
     background: $color-white;
-    border: 1px solid transparentize($color-medGrey, .8);
+    border: 1px solid transparentize($color-medGrey, .5);
     border-radius: 5px;
     box-shadow: 3px 3px 3px transparentize($color-medGrey, .7);
     box-sizing: border-box;
@@ -15,7 +15,7 @@
     width: 100%;
 
     &:hover {
-        border: 1px solid transparentize($color-medGrey, .4);
+        border: 1px solid transparentize($color-medGrey, .2);
         box-shadow: 7px 7px 7px transparentize($color-medGrey, .8);
     }
 
