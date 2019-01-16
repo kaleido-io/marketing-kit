@@ -53,7 +53,7 @@ storiesOf('Components', module)
         <Grid columnCount="4">
             <GridItem>
                 <Card 
-                    icon={ text('icon', '//placehold.it/150x150')}
+                    icon={ text('icon', <img src="//placehold.it/150x150" /> )}
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
                     meta={ <div>Meta</div> }
@@ -61,7 +61,7 @@ storiesOf('Components', module)
             </GridItem>
             <GridItem>
                 <Card 
-                    icon={ text('icon', '//placehold.it/150x150')}
+                    icon={ text('icon', <img src="//placehold.it/150x150" />) }
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
                     meta={ <div>Meta</div> }
@@ -69,7 +69,7 @@ storiesOf('Components', module)
             </GridItem>
             <GridItem>
                 <Card 
-                    icon={ text('icon', '//placehold.it/150x150')}
+                    icon={ text('icon', <img src="//placehold.it/150x150" />) }
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
                     meta={ <div>Meta</div> }
@@ -77,7 +77,7 @@ storiesOf('Components', module)
             </GridItem>
             <GridItem>
                 <Card 
-                    icon={ text('icon', '//placehold.it/150x150')}
+                    icon={ text('icon', <img src="//placehold.it/150x150" />) }
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
                     meta={ <div>Meta</div> }

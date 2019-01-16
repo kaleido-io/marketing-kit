@@ -11,9 +11,7 @@ const Card = ({
   className: "k-card"
 }, meta && React.createElement("div", {
   class: "k-card__meta"
-}, meta), React.createElement("img", {
-  src: icon
-}), React.createElement("h5", {
+}, meta), icon, React.createElement("h5", {
   className: "k-h5 k-mt-4"
 }, title), React.createElement("p", {
   className: "k-mt-2"
@@ -26,8 +24,8 @@ Card.propTypes = {
   /** Description text */
   text: PropTypes.string,
 
-  /** Icon URL */
-  icon: PropTypes.string,
+  /** Icon Markup */
+  icon: PropTypes.element,
 
   /** Container for meta content */
   meta: PropTypes.element
