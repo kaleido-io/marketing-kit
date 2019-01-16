@@ -9,11 +9,13 @@ const Grid = ({
   isCentered,
   rowGap,
   mobileRowGap,
-  colGap
+  colGap,
+  className
 }) => React.createElement("div", {
   className: `
             k-grid 
             k-grid--${columnCount} 
+            ${className}
             ${isCentered ? 'k-grid--center' : ''}
             ${isBordered ? 'k-grid--bordered' : ''}
             ${colGap ? 'k-grid-col-gap--' + colGap : ''}
@@ -28,12 +30,28 @@ Grid.defaultProps = {
   columnCount: 3
 };
 Grid.propTypes = {
+  /** Items to wrap in Grid **/
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
+
+  /** Grid divides children with slashes **/
   isBordered: PropTypes.bool,
+
+  /** Grid should center it's content **/
   isCentered: PropTypes.bool,
+
+  /** Number of columns in the grid **/
   columnCount: PropTypes.string.isRequired,
+
+  /** Size of row gap **/
   rowGap: PropTypes.string,
+
+  /** Size of column gap **/
   colGap: PropTypes.string,
-  mobileRowGap: PropTypes.string
+
+  /** Size of row gap on small devices **/
+  mobileRowGap: PropTypes.string,
+
+  /** Optional classes to pass to grid element **/
+  className: PropTypes.string
 };
 export default Grid;
