@@ -1524,7 +1524,6 @@ h1, h2, h3, h4, h5, p, li {
   box-sizing: border-box;
   color: #111111;
   height: 100%;
-  padding: 2rem;
   position: relative;
   text-align: center;
   -webkit-transition: all .2s;
@@ -1534,14 +1533,17 @@ h1, h2, h3, h4, h5, p, li {
     border: 1px solid rgba(204, 204, 204, 0.8);
     box-shadow: 7px 7px 7px rgba(204, 204, 204, 0.2); }
   .k-card img {
-    max-width: 100%; }
+    width: 100%;
+    vertical-align: bottom; }
+  .k-card__content {
+    padding: 2rem; }
   .k-card__meta {
-    background: #3842C1;
+    background: #F5F5F5;
     box-sizing: border-box;
-    color: #ffffff;
+    border-radius: 0 0 3px 3px;
+    color: #666666;
     left: 0;
     padding: .25rem 1rem;
-    position: absolute;
     top: 0;
     width: 100%; }
 
@@ -3565,9 +3567,10 @@ h1, h2, h3, h4, h5, p, li {
   position: fixed;
   width: 100vw;
   z-index: 9999;
-  transition-: all .3s;
-  -webkit-transition-property: background box-shadow;
-  transition-property: background box-shadow; }
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-property: background, box-shadow;
+  transition-property: background, box-shadow; }
   .k-header.is-scrolled {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.2); }
   .k-header.is-filled {

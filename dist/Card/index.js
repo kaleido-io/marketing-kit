@@ -5,17 +5,19 @@ import './Card.scss';
 const Card = ({
   title,
   text,
-  icon,
+  image,
   meta
 }) => React.createElement("div", {
   className: "k-card"
-}, meta && React.createElement("div", {
-  class: "k-card__meta"
-}, meta), icon, React.createElement("h5", {
-  className: "k-h5 k-mt-4"
+}, image, React.createElement("div", {
+  class: "k-card__content"
+}, React.createElement("h5", {
+  className: "k-h5"
 }, title), React.createElement("p", {
   className: "k-mt-2"
-}, text));
+}, text)), meta && React.createElement("div", {
+  class: "k-card__meta"
+}, meta));
 
 Card.propTypes = {
   /** Card Title */

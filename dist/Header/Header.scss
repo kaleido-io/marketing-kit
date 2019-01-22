@@ -6,8 +6,8 @@
     position: fixed;
     width: 100vw;
     z-index: 9999;
-    transition-: all .3s;
-    transition-property: background box-shadow;
+    transition-duration: .3s;
+    transition-property: background, box-shadow;
 
     &.is-scrolled {
         box-shadow: 0 0 20px rgba($color-white, .2);
