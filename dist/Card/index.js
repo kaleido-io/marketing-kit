@@ -9,14 +9,16 @@ const Card = ({
   meta
 }) => React.createElement("div", {
   className: "k-card"
-}, image, React.createElement("div", {
-  class: "k-card__content"
+}, image && React.createElement("div", {
+  className: "k-card__image"
+}, image), React.createElement("div", {
+  className: "k-card__content"
 }, React.createElement("h5", {
   className: "k-h5"
 }, title), React.createElement("p", {
   className: "k-mt-2"
 }, text)), meta && React.createElement("div", {
-  class: "k-card__meta"
+  className: "k-card__meta"
 }, meta));
 
 Card.propTypes = {
