@@ -11,7 +11,6 @@
     height: 100%;
     flex-direction: column;
     position: relative;
-    text-align: center;
     transition: all .2s;
     width: 100%;
 
@@ -20,9 +19,15 @@
         box-shadow: 7px 7px 7px transparentize($color-medGrey, .8);
     }
 
-    img {
-        width: 100%;
-        vertical-align: bottom;
+    &__image {
+        background: $color-lightGrey;
+        border-radius: 5px 5px 0 0;
+        padding: 2rem 0;
+        text-align: center;
+
+        img {
+            vertical-align: bottom;
+        }
     }
 
     &__content {
@@ -32,10 +37,11 @@
     &__meta {
         background: $color-lightGrey;
         box-sizing: border-box;
-        border-radius: 0 0 3px 3px;
+        border-radius: 0 0 5px 5px;
         color: $color-darkGrey;
+        font-size: .8rem;
         margin: auto 0 0;
-        padding: .25rem 1rem;
+        padding: .25rem .5rem;
         width: 100%;
     }
 }
