@@ -8,6 +8,7 @@ $triangle: polygon(0% 87%, 50% 0%, 50% 0%, 100% 87%);
     background: linear-gradient(45deg, #1C2160, $brand-purple);
     color: white;
     padding: calc(8rem + 94px) 0 calc(6rem + 200px);
+    position: relative;
 
     .k-promo__item{
         color: #ffffff;
