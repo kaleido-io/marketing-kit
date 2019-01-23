@@ -18,7 +18,7 @@ const Quote = ({
 }, text), React.createElement("div", {
   className: "k-quote__credit"
 }, headshot && React.createElement("img", {
-  class: "k-quote__headshot",
+  className: "k-quote__headshot",
   src: headshot
 }), React.createElement("div", {
   className: "k-quote__person"

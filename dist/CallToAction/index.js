@@ -8,9 +8,9 @@ const CallToAction = ({
   text,
   link
 }) => React.createElement("div", {
-  class: "k-banner--bottom"
+  className: "k-banner--bottom"
 }, React.createElement("div", {
-  class: "k-banner__shapes"
+  className: "k-banner__shapes"
 }, React.createElement(BannerShape, {
   id: "1",
   shape: "triangle",
@@ -47,13 +47,13 @@ const CallToAction = ({
   color: "orange",
   size: "large"
 })), React.createElement(Wrapper, null, title && React.createElement("h3", {
-  class: "k-h4"
+  className: "k-h4"
 }, title), text && React.createElement("p", {
-  class: "k-h6 k-u-mt-16"
+  className: "k-h6 k-u-mt-16"
 }, text), link.url && React.createElement("a", {
   href: link.url,
   target: link.target,
-  class: "k-u-mt-32 k-button k-button--white"
+  className: "k-u-mt-32 k-button k-button--white"
 }, link.title)));
 
 CallToAction.propTypes = {
