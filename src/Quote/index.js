@@ -10,7 +10,7 @@ const Quote = ({ text, headshot, person, border, link, isLarge, noPadding, extra
 
         <div className="k-quote__credit">
 
-        { headshot && <img class="k-quote__headshot" src={ headshot } /> }
+        { headshot && <img className="k-quote__headshot" src={ headshot } /> }
 
             <div className="k-quote__person">
                 <p className="k-quote__name">{ person.name }</p>

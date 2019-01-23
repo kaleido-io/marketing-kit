@@ -4,8 +4,8 @@ import BannerShape from '../BannerShape'
 import Wrapper from '../Wrapper'
 
 const CallToAction = ({ title, text, link, }) => (
-    <div class="k-banner--bottom">    
-        <div class="k-banner__shapes">
+    <div className="k-banner--bottom">    
+        <div className="k-banner__shapes">
             <BannerShape id="1" shape="triangle" color="green" size="small" opacity="30" />
             <BannerShape id="2" shape="triangle" color="orange" size="large" opacity="30" />
             <BannerShape id="3" shape="square" color="blue" size="xsmall" opacity="30" />
@@ -14,9 +14,9 @@ const CallToAction = ({ title, text, link, }) => (
             <BannerShape id="6" shape="circle" color="orange" size="large" />
         </div>
         <Wrapper>
-            { title && <h3 class="k-h4">{ title }</h3> }
-            { text && <p class="k-h6 k-u-mt-16">{ text }</p> }
-            { link.url && <a href={link.url} target={link.target} class="k-u-mt-32 k-button k-button--white">{link.title}</a> }
+            { title && <h3 className="k-h4">{ title }</h3> }
+            { text && <p className="k-h6 k-u-mt-16">{ text }</p> }
+            { link.url && <a href={link.url} target={link.target} className="k-u-mt-32 k-button k-button--white">{link.title}</a> }
         </Wrapper>
     </div>
 );
