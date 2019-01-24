@@ -3,6 +3,8 @@
 .k-footer {
     background: $brand-purple;
     padding: 4rem 0;
+    position: relative;
+    z-index: 1;
 
     address {
         color: $color-white;
