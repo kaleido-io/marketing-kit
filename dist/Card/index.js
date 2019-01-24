@@ -6,11 +6,15 @@ const Card = ({
   title,
   text,
   image,
-  meta
+  meta,
+  background
 }) => React.createElement("div", {
   className: "k-card"
 }, image && React.createElement("div", {
-  className: "k-card__image"
+  className: "k-card__image",
+  style: {
+    background: `url(${background}) no-repeat center`
+  }
 }, image), React.createElement("div", {
   className: "k-card__content"
 }, React.createElement("h5", {
@@ -32,6 +36,9 @@ Card.propTypes = {
   icon: PropTypes.element,
 
   /** Container for meta content */
-  meta: PropTypes.element
+  meta: PropTypes.element,
+
+  /** Background image for icon well */
+  background: PropTypes.string
 };
 export default Card;

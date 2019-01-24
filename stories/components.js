@@ -61,6 +61,7 @@ storiesOf('Components', module)
             </GridItem>
             <GridItem>
                 <Card 
+                    background={ text('image', '//placehold.it/300x175') }
                     image={ text('image', <img src="//placehold.it/75x75" />) }
                     title={ text('text', 'Card Title') } 
                     text={ text('text', 'Card description text lorem ipsum...') }
