@@ -7,14 +7,16 @@ const GridItem = ({
   colSpan,
   alignTop,
   alignLeft,
-  row
+  row,
+  className
 }) => React.createElement("div", {
   className: `
         k-grid-item 
-        ${colSpan && 'k-grid-item--' + colSpan}
-        ${alignTop && 'k-grid-item--top'}
-        ${alignLeft && 'k-grid-item--left'}
-        ${row && 'k-grid-item--row'}
+        ${colSpan ? 'k-grid-item--' + colSpan : null}
+        ${alignTop ? 'k-grid-item--top' : null}
+        ${alignLeft ? 'k-grid-item--left' : null}
+        ${row ? 'k-grid-item--row' : null}
+        ${className}
     `
 }, children);
 
@@ -35,6 +37,9 @@ GridItem.propTypes = {
   alignLeft: PropTypes.bool,
 
   /** Flex direction row */
-  row: PropTypes.bool
+  row: PropTypes.bool,
+
+  /** Extra classNames */
+  className: PropTypes.string
 };
 export default GridItem;

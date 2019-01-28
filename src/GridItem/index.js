@@ -3,13 +3,14 @@ import React from 'react';
 
 import './GridItem.scss';
 
-const GridItem = ({ children, colSpan, alignTop, alignLeft, row }) => (
+const GridItem = ({ children, colSpan, alignTop, alignLeft, row, className }) => (
     <div className={`
         k-grid-item 
-        ${ colSpan && 'k-grid-item--' + colSpan }
-        ${ alignTop && 'k-grid-item--top' }
-        ${ alignLeft && 'k-grid-item--left' }
-        ${ row && 'k-grid-item--row' }
+        ${ colSpan ? 'k-grid-item--' + colSpan : null }
+        ${ alignTop ? 'k-grid-item--top' : null }
+        ${ alignLeft ? 'k-grid-item--left': null }
+        ${ row ? 'k-grid-item--row': null }
+        ${ className }
     `}>
         { children }
     </div>
@@ -33,7 +34,9 @@ GridItem.propTypes = {
     /** Aligg content to the left */
     alignLeft: PropTypes.bool,
     /** Flex direction row */
-    row: PropTypes.bool
+    row: PropTypes.bool,
+    /** Extra classNames */
+    className: PropTypes.string
 }
 
 export default GridItem;
