@@ -54,6 +54,28 @@ const Footer = ({ menus }) => (
     </footer>
 );
 
+Footer.defaultProps = {
+    menus: [
+        {
+          title: 'Company',
+          items: [
+            <a href="https://kaleido.io/about/">About</a>,
+            <a href="https://kaleido.io/category/news">News</a>,
+            <a href="https://kaleido.io/contact">Contact Us</a>,
+            <a href="https://kaleido.io/careers">Careers</a>
+          ]
+        },{
+          title: 'Resources',
+          items: [
+            <a href="https://docs.kaleido.io">Docs and APIs</a>,
+            <a href="https://kaleido.io/support/">Support</a>,
+            <a href="https://kaleido.io/blog/">Blog</a>,
+            <a href="https://kaleido.io/status/">System Status</a>
+          ]
+        }
+    ]
+}
+
 Footer.propTypes = {
     /** Menus to be displayed in footer */
     menus: PropTypes.arrayOf(PropTypes.shape({

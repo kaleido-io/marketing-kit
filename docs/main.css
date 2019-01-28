@@ -1536,7 +1536,6 @@ h1, h2, h3, h4, h5, p, li {
   .k-card__image {
     background: #F5F5F5;
     border-radius: 5px 5px 0 0;
-    padding: 2rem 0;
     text-align: center; }
     .k-card__image img {
       vertical-align: bottom; }
@@ -1913,7 +1912,8 @@ h1, h2, h3, h4, h5, p, li {
   background: -webkit-linear-gradient(45deg, #1C2160, #3842C1);
   background: linear-gradient(45deg, #1C2160, #3842C1);
   color: white;
-  padding: calc(8rem + 94px) 0 calc(6rem + 200px); }
+  padding: calc(8rem + 94px) 0 calc(6rem + 200px);
+  position: relative; }
   .k-banner .k-promo__item {
     color: #ffffff;
     max-width: none;
@@ -2286,94 +2286,92 @@ h1, h2, h3, h4, h5, p, li {
             transform: scale(0.8, 0.8); } }
 
 @media screen and (max-width: 500px) {
-  .k-banner {
-    margin-top: -155px; }
-    .k-banner::after {
-      width: 100px;
-      height: 100px;
-      bottom: -5rem;
-      right: 2rem;
-      left: inherit;
-      z-index: 5; }
-    .k-banner--small #circle-1 {
-      top: 37rem;
-      left: -4rem;
-      -webkit-transform: rotate(240deg);
-              transform: rotate(240deg); }
-    .k-banner--small #circle-2 {
+  .k-banner::after {
+    width: 100px;
+    height: 100px;
+    bottom: -5rem;
+    right: 2rem;
+    left: inherit;
+    z-index: 5; }
+  .k-banner--small #circle-1 {
+    top: 37rem;
+    left: -4rem;
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg); }
+  .k-banner--small #circle-2 {
+    top: 170vw;
+    left: -50vw; }
+  .k-banner--small #square-1 {
+    left: 27rem;
+    top: 3rem;
+    -webkit-transform: rotate(200deg);
+            transform: rotate(200deg); }
+  .k-banner--small #square-2 {
+    top: 3rem;
+    left: 30rem;
+    -webkit-transform: rotate(228deg);
+            transform: rotate(228deg); }
+  .k-banner--small #square-3 {
+    top: 5rem;
+    left: 29rem;
+    width: 200px;
+    height: 200px; }
+  .k-banner--small #tri-1 {
+    display: none; }
+  .k-banner--small #tri-2 {
+    display: none; }
+  .k-banner--small #tri-3 {
+    -webkit-transform: rotate(195deg);
+            transform: rotate(195deg);
+    top: 27em;
+    left: -15em; }
+  .k-banner__home {
+    padding: calc(5rem + 94px) 0 calc(4rem + 200px);
+    margin-bottom: 8em; }
+    .k-banner__home #circle-1 {
+      top: 31rem;
+      right: -8rem; }
+    .k-banner__home #circle-2 {
       top: 170vw;
       left: -50vw; }
-    .k-banner--small #square-1 {
+    .k-banner__home #square-1 {
       left: 27rem;
-      top: 3rem;
-      -webkit-transform: rotate(200deg);
-              transform: rotate(200deg); }
-    .k-banner--small #square-2 {
-      top: 3rem;
-      left: 30rem;
+      top: 15rem;
+      -webkit-transform: rotate(195deg);
+              transform: rotate(195deg); }
+    .k-banner__home #square-2 {
+      top: 21rem;
+      left: -16rem;
       -webkit-transform: rotate(228deg);
               transform: rotate(228deg); }
-    .k-banner--small #square-3 {
+    .k-banner__home #square-3 {
       top: 5rem;
       left: 29rem;
       width: 200px;
       height: 200px; }
-    .k-banner--small #tri-1 {
-      display: none; }
-    .k-banner--small #tri-2 {
-      display: none; }
-    .k-banner--small #tri-3 {
-      -webkit-transform: rotate(195deg);
-              transform: rotate(195deg);
-      top: 27em;
-      left: -15em; }
-    .k-banner__home {
-      padding: calc(5rem + 94px) 0 calc(4rem + 200px);
-      margin-bottom: 8em; }
-      .k-banner__home #circle-1 {
-        top: 31rem;
-        right: -8rem; }
-      .k-banner__home #circle-2 {
-        top: 170vw;
-        left: -50vw; }
-      .k-banner__home #square-1 {
-        left: 27rem;
-        top: 15rem;
-        -webkit-transform: rotate(195deg);
-                transform: rotate(195deg); }
-      .k-banner__home #square-2 {
-        top: 21rem;
-        left: -16rem;
-        -webkit-transform: rotate(228deg);
-                transform: rotate(228deg); }
-      .k-banner__home #square-3 {
-        top: 5rem;
-        left: 29rem;
-        width: 200px;
-        height: 200px; }
-      .k-banner__home #tri-1 {
-        bottom: inherit;
-        top: 33rem;
-        right: -20rem; }
-      .k-banner__home #tri-2 {
-        left: 35%;
-        top: 28rem; }
-    .k-banner__shapes {
-      -webkit-transform: scale(0.5, 0.5);
-              transform: scale(0.5, 0.5); }
-    .k-banner .k-promo__item .k-banner__left {
-      width: 78%; }
-      .k-banner .k-promo__item .k-banner__left .k-h6 {
-        font-size: 16px; }
-    .k-banner__video {
-      width: 90%;
-      margin-left: -45%; }
-    .k-banner .k-h2 {
-      font-size: 32px;
-      line-height: 40px;
-      margin-bottom: 0.8em; }
-    .k-banner__left {
-      width: 65%; }
+    .k-banner__home #tri-1 {
+      bottom: inherit;
+      top: 33rem;
+      right: -20rem; }
+    .k-banner__home #tri-2 {
+      left: 35%;
+      top: 28rem; }
+  .k-banner__shapes {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5); }
+  .k-banner .k-promo__item .k-banner__left {
+    width: 78%; }
+    .k-banner .k-promo__item .k-banner__left .k-h6 {
+      font-size: 16px; }
+  .k-banner__video {
+    width: 90%;
+    margin-left: -45%; }
+  .k-banner .k-h2 {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 0.8em; }
+  .k-banner__left {
+    width: 65%; }
   .k-banner--bottom .k-wrapper {
     width: 75%;
     padding: 4em 0 0; }
@@ -2457,7 +2455,9 @@ h1, h2, h3, h4, h5, p, li {
 
 .k-footer {
   background: #3842C1;
-  padding: 4rem 0; }
+  padding: 4rem 0;
+  position: relative;
+  z-index: 1; }
   .k-footer address {
     color: #ffffff;
     font-size: .8rem;

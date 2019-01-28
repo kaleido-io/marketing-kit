@@ -40,6 +40,31 @@ const Footer = ({
   href: "/privacy-policy"
 }, "Privacy Policy"))))));
 
+Footer.defaultProps = {
+  menus: [{
+    title: 'Company',
+    items: [React.createElement("a", {
+      href: "https://kaleido.io/about/"
+    }, "About"), React.createElement("a", {
+      href: "https://kaleido.io/category/news"
+    }, "News"), React.createElement("a", {
+      href: "https://kaleido.io/contact"
+    }, "Contact Us"), React.createElement("a", {
+      href: "https://kaleido.io/careers"
+    }, "Careers")]
+  }, {
+    title: 'Resources',
+    items: [React.createElement("a", {
+      href: "https://docs.kaleido.io"
+    }, "Docs and APIs"), React.createElement("a", {
+      href: "https://kaleido.io/support/"
+    }, "Support"), React.createElement("a", {
+      href: "https://kaleido.io/blog/"
+    }, "Blog"), React.createElement("a", {
+      href: "https://kaleido.io/status/"
+    }, "System Status")]
+  }]
+};
 Footer.propTypes = {
   /** Menus to be displayed in footer */
   menus: PropTypes.arrayOf(PropTypes.shape({
