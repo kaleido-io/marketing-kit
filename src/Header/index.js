@@ -28,7 +28,7 @@ class Header extends Component {
         return (
             <header className={`k-header ${ this.props.isFilled ? 'is-filled' : '' } ${ this.state.isOpen ? 'is-open' : '' }`} id="site-header">
         <Wrapper>
-            <Logo />
+            <Logo linkUrl={ this.props.siteUrl } />
 
             <nav className="k-header__nav">
                 { this.props.children }

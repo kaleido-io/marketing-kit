@@ -10,6 +10,7 @@ import Footer from '../src/Footer';
 import Grid from '../src/Grid';
 import GridItem from '../src/GridItem';
 import Header from '../src/Header';
+import Layout from '../src/Layout';
 import Section from '../src/Section';
 import Wrapper from '../src/Wrapper';
 
@@ -109,6 +110,13 @@ storiesOf('Layout', module)
             </ul>
         </Header>
     ))
+    .add('Layout', () => 
+        <Layout 
+            children={<div style={{ padding: '200px' }}><h1>Children</h1></div>}
+            fillHeader={ boolean('isFilled', true )}
+            className={ text('className', 'addtional-class-example')}
+        />
+    )
     .add('Section', () => (
         <Section>
             <Wrapper>
