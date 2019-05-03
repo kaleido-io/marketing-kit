@@ -4,9 +4,9 @@ import BannerShape from '../BannerShape';
 import Wrapper from '../Wrapper';
 import './Banner.scss';
 
-const Banner = ({ title, description, link, image, bgColor, shapeColors}) => (
+const Banner = ({ children, title, description, link, image, bgColor, shapeColors}) => (
 
-<div className={`k-banner k-banner--small k-banner--${bgColor}`}>
+    <div className={`k-banner k-banner--small k-banner--${bgColor}`}>
     
         <BannerShape id="1" shape="triangle" color={shapeColors[0]} size="large" />
         <BannerShape id="2" shape="triangle" color={shapeColors[1]} size="small" opacity="30" />
@@ -18,19 +18,23 @@ const Banner = ({ title, description, link, image, bgColor, shapeColors}) => (
         
         <Wrapper>
         
-            <div className="k-banner__left u-float-left">
-                <h1 className="k-h2">{ title }</h1>
-                <p className="k-h6">{ description }</p>
-                { link &&
-                    <a href={link.url} target={link.target} className="k-button k-button--outline-white k-mt-8">{link.title}</a>
-                }
-            </div>
+            { title && 
+                <div className="k-banner__left u-float-left">
+                    <h1 className="k-h2">{ title }</h1>
+                    <p className="k-h6">{ description }</p>
+                    { link &&
+                        <a href={link.url} target={link.target} className="k-button k-button--outline-white k-mt-8">{link.title}</a>
+                    }
+                </div>
+            }
 
             { image && 
                 <div className="k-banner__right u-float-right">
                     <img className="k-banner__image" src={image.sizes['500']} />
                 </div>
             }
+
+            { children }
         </Wrapper>
 
     </div>
@@ -63,7 +67,11 @@ Banner.propTypes = {
     /** Image to be displayed in banner */
     image: PropTypes.shape({
         sizes: PropTypes.arrayOf(PropTypes.shape)
-    })
+    }),
+    children: PropTypes.oneOfType([
+        PropTypes.element,
+        PropTypes.arrayOf(PropTypes.element)
+    ])
 }
 
 export default Banner

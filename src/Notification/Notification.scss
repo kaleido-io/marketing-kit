@@ -1,0 +1,48 @@
+@import '../styles/variables.scss';
+
+.k-notification {
+    background: lighten($brand-orange, 32%);
+    border-radius: 5px;
+    display: table;
+    margin: 0 auto;
+    padding: .75rem;
+
+    &__label {
+        background: $brand-orange;
+        border-radius: 5px;
+        color: $color-white;
+        font-size: .8rem;
+        letter-spacing: 1px;
+        margin-right: 1rem;
+        min-width: 100px;
+        padding: .5rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        color: $color-black;
+        font-weight: bold;
+        margin-left: .5rem;
+    }
+
+    &__wrapper {
+        align-items: center;
+        display: flex;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .k-notification{
+        
+        &__wrapper {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+
+        &__label {
+            margin-bottom: 1rem;
+        }
+    }
+}

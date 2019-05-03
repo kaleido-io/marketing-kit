@@ -5,7 +5,7 @@ import Footer from '../Footer'
 import Nav from '../Nav'
 
 /** Component used to add the header and footer to any layout */
-const Layout = ({ className, fillHeader, children }) => {
+const Layout = ({ className, fillHeader, children, currentLoc }) => {
 
     const [isFilled, toggleFill] = useState(fillHeader);
   
@@ -29,10 +29,11 @@ const Layout = ({ className, fillHeader, children }) => {
       }
     })
   
-  
     return (
         <div className={`k-body ${className}`}>
-          <Header isFilled={ fillHeader }>
+          <Header
+            siteUrl={ currentLoc.url } 
+            isFilled={ isFilled }>
             <Nav />
           </Header>
           <main>{ children }</main>
@@ -49,8 +50,13 @@ Layout.propTypes = {
         PropTypes.element,
         PropTypes.arrayOf(PropTypes.element)
     ]).isRequired,
+    /** Current location information */
+    currentLoc: PropTypes.shape({
+        url: PropTypes.url,
+        slug: PropTypes.string
+    }).isRequired,
     /** whether or not header should be filled to start */
-    fillHeader: PropTypes.bool
+    isFilled: PropTypes.bool
 }
 
 export default Layout;

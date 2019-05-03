@@ -3,12 +3,13 @@ import React from 'react';
 
 import './Card.scss';
 
-const Card = ({ title, text, image, meta }) => (
+const Card = ({ children, title, text, image, meta }) => (
     <div className='k-card'>
         { image && <div className="k-card__image">{ image }</div> }
         <div className="k-card__content">
-            <h5 className="k-h5">{ title }</h5>
-            <p className="k-mt-2">{ text }</p>
+            { title && <h5 className="k-h5">{ title }</h5> }
+            { text && <p className="k-mt-2">{ text }</p> }
+            { children }
         </div>
         { meta && <div className="k-card__meta">{ meta }</div>}
     </div>

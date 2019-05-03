@@ -3,6 +3,7 @@ import React from 'react';
 import './Card.scss';
 
 const Card = ({
+  children,
   title,
   text,
   image,
@@ -13,11 +14,11 @@ const Card = ({
   className: "k-card__image"
 }, image), React.createElement("div", {
   className: "k-card__content"
-}, React.createElement("h5", {
+}, title && React.createElement("h5", {
   className: "k-h5"
-}, title), React.createElement("p", {
+}, title), text && React.createElement("p", {
   className: "k-mt-2"
-}, text)), meta && React.createElement("div", {
+}, text), children), meta && React.createElement("div", {
   className: "k-card__meta"
 }, meta));
 

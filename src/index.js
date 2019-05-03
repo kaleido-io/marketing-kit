@@ -12,6 +12,7 @@ import Header from './Header';
 import Infographic from './Infographic';
 import Layout from './Layout';
 import Logo from './Logo';
+import Notification from './Notification';
 import PieChart from './PieChart';
 import Quote from './Quote';
 import Section from './Section';
@@ -32,6 +33,7 @@ export {
     Infographic,
     Layout,
     Logo,
+    Notification,
     PieChart,
     Quote,
     Section,
