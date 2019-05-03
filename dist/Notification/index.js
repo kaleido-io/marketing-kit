@@ -12,7 +12,7 @@ const Notification = ({
 }, React.createElement("div", {
   className: "k-notification__wrapper"
 }, React.createElement("h5", {
-  className: "k-h5 k-notification__label"
+  className: "k-notification__label"
 }, label), React.createElement("p", null, text, link && React.createElement("a", {
   href: link,
   className: "k-notification__link"
