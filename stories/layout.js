@@ -115,6 +115,9 @@ storiesOf('Layout', module)
             children={<div style={{ padding: '200px' }}><h1>Children</h1></div>}
             fillHeader={ boolean('isFilled', true )}
             className={ text('className', 'addtional-class-example')}
+            currentLoc={{
+                url: '/'
+            }}
         />
     )
     .add('Section', () => (
