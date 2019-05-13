@@ -6,9 +6,9 @@
     
     &__title {
         background: url('../assets/kaleido-logo.svg') no-repeat center;
-        background-size: contain;
-        height: 22px;
-        width: 140px;
+        background-size: contain;    
+        height: 45px;
+        width: 170px;
         text-indent: -9999em;
     }
 
@@ -36,8 +36,9 @@
     .k-logo {
         
         &__title {
-            height: 28px;
-            width: 178px;
+            margin-right: 2rem;
+            height: 45px;
+            width: 170px;
         }
 
     }
