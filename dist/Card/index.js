@@ -7,9 +7,10 @@ const Card = ({
   title,
   text,
   image,
-  meta
+  meta,
+  className
 }) => React.createElement("div", {
-  className: "k-card"
+  className: `k-card ${className}`
 }, image && React.createElement("div", {
   className: "k-card__image"
 }, image), React.createElement("div", {
@@ -33,6 +34,9 @@ Card.propTypes = {
   icon: PropTypes.element,
 
   /** Container for meta content */
-  meta: PropTypes.element
+  meta: PropTypes.element,
+
+  /** Additional class names */
+  className: PropTypes.string
 };
 export default Card;

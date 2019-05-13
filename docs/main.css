@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900);
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -1606,14 +1607,17 @@ h1, h2, h3, h4, h5, p, li {
     margin-top: 2rem;
     width: 300px;
     left: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#3023AE), to(#C86DD7));
     background: -webkit-linear-gradient(left, #3023AE, #C86DD7);
     background: linear-gradient(90deg, #3023AE, #C86DD7);
     -webkit-transform: skewY(-10deg);
             transform: skewY(-10deg); }
   .k-grid--bordered > :nth-child(3n)::before {
+    background: -webkit-gradient(linear, left top, right top, from(#1C65B4), to(#35CC8C));
     background: -webkit-linear-gradient(left, #1C65B4, #35CC8C);
     background: linear-gradient(90deg, #1C65B4, #35CC8C); }
   .k-grid--bordered > :nth-child(4n)::before {
+    background: -webkit-gradient(linear, left top, right top, from(#EE34A8), to(#FD9C51));
     background: -webkit-linear-gradient(left, #EE34A8, #FD9C51);
     background: linear-gradient(90deg, #EE34A8, #FD9C51); }
 
@@ -1655,6 +1659,7 @@ h1, h2, h3, h4, h5, p, li {
     .k-grid--bordered > * {
       position: relative; }
     .k-grid--bordered > :not(:first-child)::before {
+      background: -webkit-gradient(linear, left top, left bottom, from(#3023AE), to(#C86DD7));
       background: -webkit-linear-gradient(#3023AE, #C86DD7);
       background: linear-gradient(#3023AE, #C86DD7);
       display: block;
@@ -1668,9 +1673,11 @@ h1, h2, h3, h4, h5, p, li {
       -webkit-transform: skewY(-10deg) rotate(10deg);
               transform: skewY(-10deg) rotate(10deg); }
     .k-grid--bordered > :nth-child(3n)::before {
+      background: -webkit-gradient(linear, left top, left bottom, from(#1C65B4), to(#35CC8C));
       background: -webkit-linear-gradient(#1C65B4, #35CC8C);
       background: linear-gradient(#1C65B4, #35CC8C); }
     .k-grid--bordered > :nth-child(4n)::before {
+      background: -webkit-gradient(linear, left top, left bottom, from(#EE34A8), to(#FD9C51));
       background: -webkit-linear-gradient(#EE34A8, #FD9C51);
       background: linear-gradient(#EE34A8, #FD9C51); }
     .k-grid-col-gap--2 {
@@ -1794,6 +1801,38 @@ h1, h2, h3, h4, h5, p, li {
     margin: 2rem auto;
     width: inherit; } }
 
+.k-notification {
+  background: #feeee1;
+  border-radius: 5px;
+  display: table;
+  margin: 0 auto;
+  padding: .75rem; }
+  .k-notification__label {
+    background: #F99243;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: .8rem;
+    letter-spacing: 1px;
+    margin-right: 1rem;
+    min-width: 100px;
+    padding: .5rem;
+    text-align: center;
+    text-transform: uppercase; }
+  .k-notification__link {
+    color: #111111;
+    font-weight: bold;
+    margin-left: .5rem; }
+  .k-notification__wrapper {
+    align-items: center;
+    display: flex; }
+
+@media screen and (max-width: 800px) {
+  .k-notification__wrapper {
+    align-items: flex-start;
+    flex-direction: column; }
+  .k-notification__label {
+    margin-bottom: 1rem; } }
+
 .k-pie-chart {
   align-items: center;
   display: flex;
@@ -1872,6 +1911,7 @@ h1, h2, h3, h4, h5, p, li {
     justify-content: center; }
     .k-quote--bordered:before {
       content: '';
+      background: -webkit-gradient(linear, left top, left bottom, from(#EE34A8), to(#FD9C51));
       background: -webkit-linear-gradient(#EE34A8, #FD9C51);
       background: linear-gradient(#EE34A8, #FD9C51);
       display: block;
@@ -1970,6 +2010,7 @@ h1, h2, h3, h4, h5, p, li {
       -webkit-transform: rotate(-35deg);
               transform: rotate(-35deg);
       top: -3rem;
+      background: -webkit-gradient(linear, left top, right top, from(#EE34A8), to(#FD9C51));
       background: -webkit-linear-gradient(left, #EE34A8, #FD9C51);
       background: linear-gradient(to right, #EE34A8, #FD9C51); }
     .k-banner--white #square-2 {
@@ -1978,6 +2019,7 @@ h1, h2, h3, h4, h5, p, li {
       -webkit-transform: rotate(-55deg);
               transform: rotate(-55deg);
       z-index: 5;
+      background: -webkit-gradient(linear, right top, left top, from(#3942C1), to(#1C2160));
       background: -webkit-linear-gradient(right, #3942C1, #1C2160);
       background: linear-gradient(to left, #3942C1, #1C2160); }
       .k-banner--white #square-2 .top-image, .k-banner--white #square-2 .left-image, .k-banner--white #square-2 .right-image, .k-banner--white #square-2 .bottom-image {
@@ -1999,6 +2041,7 @@ h1, h2, h3, h4, h5, p, li {
       -webkit-transform: rotate(-12deg);
               transform: rotate(-12deg);
       z-index: 4;
+      background: -webkit-gradient(linear, left top, right top, from(#429321), to(#B4EC51));
       background: -webkit-linear-gradient(left, #429321, #B4EC51);
       background: linear-gradient(to right, #429321, #B4EC51); }
   .k-banner .k-wrapper {
@@ -2044,15 +2087,19 @@ h1, h2, h3, h4, h5, p, li {
       height: 400px;
       width: 400px; }
     .k-banner__shape--blue {
+      background: -webkit-gradient(linear, left top, left bottom, from(#33D9F2), to(#202CE0));
       background: -webkit-linear-gradient(#33D9F2, #202CE0);
       background: linear-gradient(#33D9F2, #202CE0); }
     .k-banner__shape--green {
+      background: -webkit-gradient(linear, left top, left bottom, from(#1C65B4), to(#35CC8C));
       background: -webkit-linear-gradient(#1C65B4, #35CC8C);
       background: linear-gradient(#1C65B4, #35CC8C); }
     .k-banner__shape--orange {
+      background: -webkit-gradient(linear, left top, left bottom, from(#EE34A8), to(#FD9C51));
       background: -webkit-linear-gradient(#EE34A8, #FD9C51);
       background: linear-gradient(#EE34A8, #FD9C51); }
     .k-banner__shape--purple {
+      background: -webkit-gradient(linear, left top, left bottom, from(#3023AE), to(#C86DD7));
       background: -webkit-linear-gradient(#3023AE, #C86DD7);
       background: linear-gradient(#3023AE, #C86DD7); }
     .k-banner__shape--o-15 {
@@ -2130,6 +2177,7 @@ h1, h2, h3, h4, h5, p, li {
             transform: rotate(250deg); }
 
 .k-banner--bottom {
+  background: #3842C1 -webkit-gradient(linear, left top, left bottom, color-stop(10%, #1C2160), to(#3842C1));
   background: #3842C1 -webkit-linear-gradient(top, #1C2160 10%, #3842C1);
   background: #3842C1 linear-gradient(to bottom, #1C2160 10%, #3842C1);
   color: #ffffff;
@@ -2142,6 +2190,7 @@ h1, h2, h3, h4, h5, p, li {
   .k-banner--bottom .k-wrapper {
     text-align: center; }
   .k-banner--bottom .k-banner__shape--green {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #1C65B4), to(#35CC8C));
     background: -webkit-linear-gradient(top, #1C65B4 10%, #35CC8C);
     background: linear-gradient(to bottom, #1C65B4 10%, #35CC8C); }
   .k-banner--bottom #circle-1 {
@@ -2174,6 +2223,7 @@ h1, h2, h3, h4, h5, p, li {
     transform: rotate(20deg);
     top: 15vw;
     right: 30%;
+    background: -webkit-gradient(linear, left top, left bottom, from(#33D9F2), to(#202CE0));
     background: -webkit-linear-gradient(#33D9F2, #202CE0);
     background: linear-gradient(#33D9F2, #202CE0); }
   .k-banner--bottom #square-2 {
@@ -2182,26 +2232,32 @@ h1, h2, h3, h4, h5, p, li {
     top: -10vw;
     -webkit-transform: rotate(141deg);
             transform: rotate(141deg);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #1C65B4), to(#35CC8C));
     background: -webkit-linear-gradient(top, #1C65B4 10%, #35CC8C);
     background: linear-gradient(to bottom, #1C65B4 10%, #35CC8C); }
 
 .k-banner--green {
+  background: -webkit-gradient(linear, left top, right top, from(#1C65B4), to(#35CC8C));
   background: -webkit-linear-gradient(left, #1C65B4, #35CC8C);
   background: linear-gradient(90deg, #1C65B4, #35CC8C); }
 
 .k-banner--orange {
+  background: -webkit-gradient(linear, left top, right top, from(#FD9C51), to(#EE34A8));
   background: -webkit-linear-gradient(left, #FD9C51, #EE34A8);
   background: linear-gradient(90deg, #FD9C51, #EE34A8); }
 
 .k-banner--pink {
+  background: -webkit-gradient(linear, left top, right top, from(#EE34A8), to(#FD9C51));
   background: -webkit-linear-gradient(left, #EE34A8, #FD9C51);
   background: linear-gradient(90deg, #EE34A8, #FD9C51); }
 
 .k-banner--purple {
+  background: -webkit-gradient(linear, left top, right top, from(#3023AE), to(#C86DD7));
   background: -webkit-linear-gradient(left, #3023AE, #C86DD7);
   background: linear-gradient(90deg, #3023AE, #C86DD7); }
 
 .k-banner--blue {
+  background: -webkit-gradient(linear, left top, right top, from(#3023AE), to(#1C65B4));
   background: -webkit-linear-gradient(left, #3023AE, #1C65B4);
   background: linear-gradient(90deg, #3023AE, #1C65B4); }
 
@@ -2216,14 +2272,14 @@ h1, h2, h3, h4, h5, p, li {
     right: 4rem; } }
 
 @media screen and (max-width: 1100px) {
-  .k-banner .k-promo__item .k-banner__left {
+  .k-banner .k-banner__left {
     float: none;
     width: 80%; }
-  .k-banner .k-promo__item .k-banner__right {
+  .k-banner .k-banner__right {
     float: none;
     margin-top: 4rem;
     width: 100%; }
-    .k-banner .k-promo__item .k-banner__right img {
+    .k-banner .k-banner__right img {
       width: 100%; }
   .k-banner__video {
     top: 64%;
@@ -2272,6 +2328,7 @@ h1, h2, h3, h4, h5, p, li {
     display: block;
     margin-bottom: 2rem;
     padding: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#EE34A8), to(#F99243));
     background: -webkit-linear-gradient(left, #EE34A8, #F99243);
     background: linear-gradient(90deg, #EE34A8, #F99243);
     left: 0;
@@ -2432,10 +2489,10 @@ h1, h2, h3, h4, h5, p, li {
   align-items: center;
   display: flex; }
   .k-logo__title {
-    background: url(static/media/kaleido-logo.e4852566.svg) no-repeat center;
+    background: url(static/media/kaleido-logo.3be9ff6c.svg) no-repeat center;
     background-size: contain;
-    height: 22px;
-    width: 140px;
+    height: 45px;
+    width: 170px;
     text-indent: -9999em; }
   .k-logo__tagline {
     color: #ffffff;
@@ -2450,8 +2507,8 @@ h1, h2, h3, h4, h5, p, li {
 
 @media screen and (min-width: 800px) {
   .k-logo__title {
-    height: 28px;
-    width: 178px; } }
+    height: 45px;
+    width: 170px; } }
 
 .k-footer {
   background: #3842C1;
