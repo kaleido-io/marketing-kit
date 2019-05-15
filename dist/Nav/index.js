@@ -15,7 +15,7 @@ const Nav = ({
 }, "Marketplace")), React.createElement("li", {
   className: "k-header__nav-dropdown"
 }, React.createElement("a", {
-  href: "/about"
+  href: "https://kaleido.io/about"
 }, "About"), React.createElement("ul", {
   className: "k-header__nav-dropdown-menu"
 }, React.createElement("li", null, React.createElement("a", {

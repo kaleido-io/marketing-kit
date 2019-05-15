@@ -8,7 +8,7 @@ const Nav = ({ currentLocation }) => (
         <li><a href="https://kaleido.io/solutions/">Solutions</a></li>
         <li><a href="https://docs.kaleido.io">Learn</a></li>
         <li><a href="https://marketplace.kaleido.io">Marketplace</a></li>
-        <li className="k-header__nav-dropdown"><a href="/about">About</a>
+        <li className="k-header__nav-dropdown"><a href="https://kaleido.io/about">About</a>
             <ul className="k-header__nav-dropdown-menu">
                 <li><a href="https://kaleido.io/about">About Us</a></li>
                 <li><a href="https://kaleido.io/blog/">Blog</a></li>
