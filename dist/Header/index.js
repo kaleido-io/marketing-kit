@@ -15,7 +15,6 @@ class Header extends Component {
   }
 
   toggleMenu() {
-    console.log('toggle');
     this.setState(state => {
       return {
         isOpen: !state.isOpen

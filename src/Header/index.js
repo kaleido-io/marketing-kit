@@ -16,7 +16,6 @@ class Header extends Component {
     }
 
     toggleMenu() {
-        console.log('toggle');
         this.setState( (state) => {
             return {
                 isOpen: !state.isOpen
@@ -27,26 +26,26 @@ class Header extends Component {
     render() {
         return (
             <header className={`k-header ${ this.props.isFilled ? 'is-filled' : '' } ${ this.state.isOpen ? 'is-open' : '' }`} id="site-header">
-        <Wrapper>
-            <Logo linkUrl={ this.props.siteUrl } />
+                <Wrapper>
+                    <Logo linkUrl={ this.props.siteUrl } />
 
-            <nav className="k-header__nav">
-                { this.props.children }
-            </nav>
+                    <nav className="k-header__nav">
+                        { this.props.children }
+                    </nav>
 
-            <button 
-                className={`hamburger k-header__nav-toggler hamburger--squeeze ${ this.state.isOpen ? 'is-active' : '' }`} 
-                type="button" 
-                aria-label="Menu" 
-                aria-controls="navigation"
-                onClick={ this.toggleMenu }>
-              
-                <span className="hamburger-box">
-                    <span className="hamburger-inner"></span>
-                </span>
-            </button>
-        </Wrapper>
-    </header>
+                    <button 
+                        className={`hamburger k-header__nav-toggler hamburger--squeeze ${ this.state.isOpen ? 'is-active' : '' }`} 
+                        type="button" 
+                        aria-label="Menu" 
+                        aria-controls="navigation"
+                        onClick={ this.toggleMenu }>
+
+                        <span className="hamburger-box">
+                            <span className="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </Wrapper>
+            </header>
         )
     }
 }
