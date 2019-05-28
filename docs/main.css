@@ -2512,7 +2512,7 @@ h1, h2, h3, h4, h5, p, li {
 
 .k-footer {
   background: #3842C1;
-  padding: 4rem 0;
+  padding: 4rem 0 4rem 50px;
   position: relative;
   z-index: 1; }
   .k-footer address {
@@ -2531,6 +2531,8 @@ h1, h2, h3, h4, h5, p, li {
     margin-top: .25rem; }
   .k-footer__right {
     margin-top: 2rem; }
+  .k-footer .k-logo__title {
+    margin-left: -50px; }
   .k-footer .k-social-links {
     display: flex;
     margin-top: .5rem; }
