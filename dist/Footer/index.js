@@ -28,7 +28,10 @@ const Footer = ({
   href: "https://www.youtube.com/channel/UC731wSTQEwqZG36As_qfzPg"
 }, React.createElement("i", {
   className: "k-icon ion-logo-youtube"
-})))), React.createElement("address", null, "16 W. Martin Street", React.createElement("br", null), "Raleigh, NC 27601")), menus.map(menu => React.createElement("dl", {
+})))), React.createElement("address", null, "16 W. Martin Street", React.createElement("br", null), "Raleigh, NC 27601"), React.createElement("a", {
+  href: "tel:984-205-9436",
+  target: "_blank"
+}, "(984) 205-9436")), menus.map(menu => React.createElement("dl", {
   key: menu.title
 }, React.createElement("dt", null, menu.title), menu.items.map((item, index) => React.createElement("dd", {
   key: 'item-' + index
