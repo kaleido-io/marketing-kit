@@ -3,21 +3,23 @@ import React from 'react';
 import './Card.scss';
 
 const Card = ({
+  children,
   title,
   text,
   image,
-  meta
+  meta,
+  className
 }) => React.createElement("div", {
-  className: "k-card"
+  className: `k-card ${className}`
 }, image && React.createElement("div", {
   className: "k-card__image"
 }, image), React.createElement("div", {
   className: "k-card__content"
-}, React.createElement("h5", {
+}, title && React.createElement("h5", {
   className: "k-h5"
-}, title), React.createElement("p", {
+}, title), text && React.createElement("p", {
   className: "k-mt-2"
-}, text)), meta && React.createElement("div", {
+}, text), children), meta && React.createElement("div", {
   className: "k-card__meta"
 }, meta));
 
@@ -32,6 +34,9 @@ Card.propTypes = {
   icon: PropTypes.element,
 
   /** Container for meta content */
-  meta: PropTypes.element
+  meta: PropTypes.element,
+
+  /** Additional class names */
+  className: PropTypes.string
 };
 export default Card;

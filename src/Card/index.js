@@ -3,12 +3,13 @@ import React from 'react';
 
 import './Card.scss';
 
-const Card = ({ title, text, image, meta }) => (
-    <div className='k-card'>
+const Card = ({ children, title, text, image, meta, className }) => (
+    <div className={ `k-card ${className}`}>
         { image && <div className="k-card__image">{ image }</div> }
         <div className="k-card__content">
-            <h5 className="k-h5">{ title }</h5>
-            <p className="k-mt-2">{ text }</p>
+            { title && <h5 className="k-h5">{ title }</h5> }
+            { text && <p className="k-mt-2">{ text }</p> }
+            { children }
         </div>
         { meta && <div className="k-card__meta">{ meta }</div>}
     </div>
@@ -22,7 +23,9 @@ Card.propTypes = {
     /** Icon Markup */
     icon: PropTypes.element,
     /** Container for meta content */
-    meta: PropTypes.element
+    meta: PropTypes.element,
+    /** Additional class names */
+    className: PropTypes.string
 };
 
 export default Card;

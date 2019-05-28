@@ -426,7 +426,6 @@ $triangle: polygon(0% 87%, 50% 0%, 50% 0%, 100% 87%);
 
 @media screen and (max-width: 1100px){
     .k-banner{
-        .k-promo__item{
             .k-banner__left{
                 float: none;
                 width: 80%;
@@ -441,7 +440,6 @@ $triangle: polygon(0% 87%, 50% 0%, 50% 0%, 100% 87%);
                     width: 100%;
                 }
             }
-        }
 
         &__video {
             top: 64%;

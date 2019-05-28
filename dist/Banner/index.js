@@ -5,6 +5,7 @@ import Wrapper from '../Wrapper';
 import './Banner.scss';
 
 const Banner = ({
+  children,
   title,
   description,
   link,
@@ -50,7 +51,7 @@ const Banner = ({
   shape: "circle",
   color: shapeColors[2],
   size: "large"
-}), React.createElement(Wrapper, null, React.createElement("div", {
+}), React.createElement(Wrapper, null, title && React.createElement("div", {
   className: "k-banner__left u-float-left"
 }, React.createElement("h1", {
   className: "k-h2"
@@ -65,7 +66,7 @@ const Banner = ({
 }, React.createElement("img", {
   className: "k-banner__image",
   src: image.sizes['500']
-}))));
+})), children));
 
 Banner.defaultProps = {
   bgColor: 'blue',
@@ -94,6 +95,7 @@ Banner.propTypes = {
   /** Image to be displayed in banner */
   image: PropTypes.shape({
     sizes: PropTypes.arrayOf(PropTypes.shape)
-  })
+  }),
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)])
 };
 export default Banner;

@@ -24,6 +24,7 @@ const Footer = ({ menus }) => (
                        16 W. Martin Street<br/>
                        Raleigh, NC 27601
                    </address>
+                   <a href="tel:984-205-9436" target="_blank">(984) 205-9436</a>
                </div>
                
                { menus.map( menu => (

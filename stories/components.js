@@ -11,6 +11,7 @@ import Card from '../src/Card';
 import Grid from '../src/Grid';
 import GridItem from '../src/GridItem';
 import Infographic from '../src/Infographic';
+import Notification from '../src/Notification';
 import PieChart from '../src/PieChart';
 import Quote from '../src/Quote';
 import Wrapper from '../src/Wrapper';
@@ -91,6 +92,13 @@ storiesOf('Components', module)
             title={ text('title', 'Statistic') } 
             text={ text('description', 'Description Text') } 
             color={ select('color', ['green', 'orange', 'purple'], 'green')} 
+            />
+    )
+    .add('Notification', () =>
+        <Notification
+            label={ text('label', 'Label Text') }
+            text={ text('text', 'This is my notification text') }
+            link={ text('link', 'https://google.com') }
             />
     )
     .add('PieChart', () => 

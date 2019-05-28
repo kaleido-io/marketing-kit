@@ -15,7 +15,6 @@ class Header extends Component {
   }
 
   toggleMenu() {
-    console.log('toggle');
     this.setState(state => {
       return {
         isOpen: !state.isOpen
@@ -27,7 +26,9 @@ class Header extends Component {
     return React.createElement("header", {
       className: `k-header ${this.props.isFilled ? 'is-filled' : ''} ${this.state.isOpen ? 'is-open' : ''}`,
       id: "site-header"
-    }, React.createElement(Wrapper, null, React.createElement(Logo, null), React.createElement("nav", {
+    }, React.createElement(Wrapper, null, React.createElement(Logo, {
+      linkUrl: this.props.siteUrl
+    }), React.createElement("nav", {
       className: "k-header__nav"
     }, this.props.children), React.createElement("button", {
       className: `hamburger k-header__nav-toggler hamburger--squeeze ${this.state.isOpen ? 'is-active' : ''}`,

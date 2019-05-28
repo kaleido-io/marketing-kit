@@ -10,7 +10,9 @@ import Grid from './Grid';
 import GridItem from './GridItem';
 import Header from './Header';
 import Infographic from './Infographic';
+import Layout from './Layout';
 import Logo from './Logo';
+import Notification from './Notification';
 import PieChart from './PieChart';
 import Quote from './Quote';
 import Section from './Section';
@@ -29,7 +31,9 @@ export {
     GridItem,
     Header,
     Infographic,
+    Layout,
     Logo,
+    Notification,
     PieChart,
     Quote,
     Section,
