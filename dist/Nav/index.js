@@ -8,9 +8,17 @@ const Nav = ({
   href: "https://kaleido.io/product/"
 }, "Product")), React.createElement("li", null, React.createElement("a", {
   href: "https://kaleido.io/pricing/"
-}, "Pricing")), React.createElement("li", null, React.createElement("a", {
-  href: "https://kaleido.io/solutions/"
-}, "Solutions")), React.createElement("li", {
+}, "Pricing")), React.createElement("li", {
+  className: "k-header__nav-dropdown"
+}, React.createElement("span", null, "Solutions"), React.createElement("ul", {
+  className: "k-header__nav-dropdown-menu"
+}, React.createElement("li", null, React.createElement("a", {
+  href: "https://kaleido.io/solutions"
+}, "Industries"), React.createElement("span", null, "Solutions for every industry")), React.createElement("li", null, React.createElement("a", {
+  href: "https://kaleido.io/customer-stories"
+}, "Customer Stories"), React.createElement("span", null, "Global leaders succeeding with Kaleido")), React.createElement("li", null, React.createElement("a", {
+  href: "https://kaleido.io/partners"
+}, "Partnerships"), React.createElement("span", null, "Embed, empower, go to market")))), React.createElement("li", {
   className: "k-header__nav-dropdown"
 }, React.createElement("span", null, "Resources"), React.createElement("ul", {
   className: "k-header__nav-dropdown-menu"
@@ -20,9 +28,7 @@ const Nav = ({
   href: "https://kaleido.io/blog"
 }, "Blog"), React.createElement("span", null, "News you can use")), React.createElement("li", null, React.createElement("a", {
   href: "https://api.kaleido.io"
-}, "API Reference"), React.createElement("span", null, "Automate Kaleido via API")), React.createElement("li", null, React.createElement("a", {
-  href: "https://kaleido.io/partners"
-}, "Partnerships"), React.createElement("span", null, "Embed, empower, go to market")))), React.createElement("li", null, React.createElement("a", {
+}, "API Reference"), React.createElement("span", null, "Automate Kaleido via API")))), React.createElement("li", null, React.createElement("a", {
   href: "https://marketplace.kaleido.io"
 }, "Marketplace")), React.createElement("li", null, React.createElement("a", {
   href: "https://kaleido.io/about"

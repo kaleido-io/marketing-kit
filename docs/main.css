@@ -3760,9 +3760,9 @@ h1, h2, h3, h4, h5, p, li {
       top: 2rem;
       box-sizing: border-box;
       left: 50%;
-      margin-left: -25rem !important;
+      margin-left: -21.5rem !important;
       margin-top: 2rem !important;
-      width: 50rem;
+      width: 42rem;
       padding: 1rem;
       position: absolute; }
       .k-header__nav-dropdown-menu::before {
@@ -3779,7 +3779,7 @@ h1, h2, h3, h4, h5, p, li {
         width: 0; }
       .k-header__nav-dropdown-menu li {
         margin: 0 !important;
-        width: 25%; }
+        width: 33%; }
         .k-header__nav-dropdown-menu li a {
           color: #3842C1 !important;
           display: block;
