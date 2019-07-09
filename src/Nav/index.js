@@ -9,12 +9,12 @@ const Nav = ({ currentLocation }) => (
             <span>Solutions</span>
             <ul className="k-header__nav-dropdown-menu">
                 <li>
-                    <a href="https://docs.kaleido.io">Documentation</a>
-                    <span>Guides, walkthroughs, faqs</span>
+                    <a href="https://kaleido.io/solutions">Industries</a>
+                    <span>Solutions for every industry</span>
                 </li>
                 <li>
-                    <a href="https://kaleido.io/blog">Blog</a>
-                    <span>News you can use</span>
+                    <a href="https://kaleido.io/customer-stories">Customer Stories</a>
+                    <span>Global leaders succeeding with Kaleido</span>
                 </li>
                 <li>
                     <a href="https://kaleido.io/partners">Partnerships</a>
