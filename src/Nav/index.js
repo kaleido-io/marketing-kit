@@ -5,7 +5,23 @@ const Nav = ({ currentLocation }) => (
     <ul class="k-nav">
         <li><a href="https://kaleido.io/product/">Product</a></li>
         <li><a href="https://kaleido.io/pricing/">Pricing</a></li>
-        <li><a href="https://kaleido.io/solutions/">Solutions</a></li>
+        <li className="k-header__nav-dropdown">
+            <span>Solutions</span>
+            <ul className="k-header__nav-dropdown-menu">
+                <li>
+                    <a href="https://kaleido.io/solutions">Industries</a>
+                    <span>Solutions for every industry</span>
+                </li>
+                <li>
+                    <a href="https://kaleido.io/customer-stories">Customer Stories</a>
+                    <span>Global leaders succeeding with Kaleido</span>
+                </li>
+                <li>
+                    <a href="https://kaleido.io/partners">Partnerships</a>
+                    <span>Embed, empower, go to market</span>
+                </li>
+            </ul>
+        </li>
         <li className="k-header__nav-dropdown">
             <span>Resources</span>
             <ul className="k-header__nav-dropdown-menu">
@@ -20,10 +36,6 @@ const Nav = ({ currentLocation }) => (
                 <li>
                     <a href="https://api.kaleido.io">API Reference</a>
                     <span>Automate Kaleido via API</span>    
-                </li>
-                <li>
-                    <a href="https://kaleido.io/partners">Partnerships</a>
-                    <span>Embed, empower, go to market</span>
                 </li>
             </ul>
         </li>
